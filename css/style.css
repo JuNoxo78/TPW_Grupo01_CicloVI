@@ -1,0 +1,24 @@
+body {
+    font-family: Arial;
+}
+
+#formularioAdvice {
+    text-align: center;
+    border: black solid 1px;
+    width: 300px;
+    padding: 40px 100px;
+    margin: 30px auto;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#formulario {
+    border: black solid 1px;
+    width: 300px;
+    margin: 0px auto;
+    padding: 50px 100px;
+}
