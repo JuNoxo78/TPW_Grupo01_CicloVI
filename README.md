@@ -6,6 +6,6 @@ Claro está, permitirá la gestión de citas, la visualización de los horarios 
 Pronto, se detallarán más funciones, así como la descripción técnica de su desarrollo.
 
 ## Integrantes:
--Juan Lopez Cordova
--Cuevas Fernandez Victor Alexander
--Lozano DelaCruz Maximo Aron
+- Juan Lopez Cordova
+- Cuevas Fernandez Victor Alexander
+- Lozano DelaCruz Maximo Aron
