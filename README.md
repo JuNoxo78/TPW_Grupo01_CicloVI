@@ -11,4 +11,4 @@ Heber Gomez Hurtado
 ## Integrantes:
 - Juan Lopez Cordova
 - Cuevas Fernandez Victor Alexander
-- Lozano DelaCruz Maximo Aron
+- Lozano de la Cruz Maximo Aron
