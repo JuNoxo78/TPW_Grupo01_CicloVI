@@ -4,3 +4,11 @@ Este proyecto consiste en un sitio web para la gestión de un consultorio médic
 Claro está, permitirá la gestión de citas, la visualización de los horarios de los doctores disponibles para la libre elección del paciente, y el acceso de este a su historial clínico.
 
 Pronto, se detallarán más funciones, así como la descripción técnica de su desarrollo.
+
+
+
+
+
+
+## Docente:
+Heber Gomez Hurtado 
