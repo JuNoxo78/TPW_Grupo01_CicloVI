@@ -6,50 +6,34 @@
     <title>Essalud</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="formularioAdvice">
-        <h1>Formulario de Registro de Citas</h1>
-        <p>Para el inicio del proyecto, se dispone la prueba del siguiente formulario para la reserva de citas, por ser este
-            parte de las funcionalidades centrales de la aplicación.</p>
-    </div>
-    <div id="formulario">
-        <form>
-            <label>Nombre Completo: </label>
-            <input type="text" placeholder="Escribe tu nombre..." required>
-            <br><br>
-            <label>DNI: </label>
-            <input type="text" required>
-            <br><br>
-            <label>N° de Celular: </label>
-            <input type="text" required>
-            <br><br>
-            <label>Especialidad: </label>
-            <select name="especialidad">
-                <option>Medicina General</option>
-                <option>Cardiología</option>
-                <option>Neurología</option>
-                <option>Oftalmología</option>
-                <option>Urología</option>
-                <option>Ginecología</option>
-            </select>
-            <br><br>
-            <label>Doctores Disponibles</label>
-            <select name="doctores">
-                <option>Alonso Uribe</option>
-                <option>Tito Salirrosas</option>
-                <option>Reumenio Bonfiacio</option>
-                <option>Jacinto Losa</option>
-                <option>Linzeykin Carcajal</option>
-                <option>Alicia Sotomayor</option>
-            </select>
-            <br><br>
-            <button type="submit">
-                Registrar
-            </button>
-        </form>
-    </div>
+   <header>
+        <div class="Logo">
+            <img src="img/Icon_Header.svg" alt="Logo de la empresa" >
+        </div>
+        <nav>
+            <a href="#" class="Inicio">Inicio</a>
+            <a href="#" class="Nosotros" >Nosotros</a>
+            <a href="#" class="Especialidades">Especialidades</a>
+            <a href="#" class="Atencion">Atencion medica</a>
+            <a href="#" class="Centro">Centro de Ayuda</a>         
+        </nav> 
+        <div class="Sesion">
+            <i class="fa-solid fa-phone" id="LogoTelefono"></i>
+            <a href="#" id="BotonSesion">
+            <i class="fa-regular fa-user"></i>
+                Iniciar Sesion
+            </a>
+        </div>     
+   </header>
 </body>
-
 </html>

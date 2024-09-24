@@ -2,23 +2,108 @@ body {
     font-family: Arial;
 }
 
-#formularioAdvice {
-    text-align: center;
-    border: black solid 1px;
-    width: 300px;
-    padding: 40px 100px;
-    margin: 30px auto;
+
+h1{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+  font-optical-sizing: auto;
+  font-weight:bolder ;
+  font-style:unset ;
+  text-transform: capitalize;
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 30px;
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: #d7dbdd;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 4px 10px 0px ;
 }
 
-#formulario {
-    border: black solid 1px;
-    width: 300px;
-    margin: 0px auto;
-    padding: 50px 100px;
+
+a{
+    text-decoration: none;
+    color: #1f618d;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 450px;
+    font-size: 15.5px;
+}
+
+
+#BotonSesion{
+    color: #2e4053;
+    border-width: 2px;
+    border-color: #2e4053 ;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 8px 12px 8px 12px;
+    margin-right: 20px;
+    margin-left: 5px;
+    width: 164px;
+    height: 45px;
+}
+
+#LogoTelefono{
+    padding: 7px;
+    border-width: 2px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #2e4053;
+    background-color: #2e4053;
+    width: 15px;
+    height: 15px;
+    color: white;
+}
+
+div a:hover{
+    color: aliceblue;
+}
+
+.Logo{
+    display: flex;
+    padding-left: 20px;
+}
+
+
+.Logo img{
+    width: 100px;
+    height: 70.23px;
+}
+
+nav a{
+    height: 32px;
+    margin-right: 10px;
+}
+
+.Nosotros{
+    width: 107px;
+}
+
+.Especialidades{
+    width: 153px;
+}
+
+.Atencion{
+    width: 169px;
+}
+
+.Centro{
+    width: 168px;
+}
+
+nav a:hover{
+    color: aliceblue;
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    
+    nav{
+        padding: 10px 0px;
+    }
 }
