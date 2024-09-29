@@ -1,11 +1,13 @@
+body {
+    margin: 38px;
+}
+
 #animated-banner {
     position: relative;
-    margin: 50px auto;
-    margin-top: 50px;
     width: 226px;
     height: 1441px;
-    border-radius: 25px;
     overflow: hidden;
+    border-radius: 25px;
     background-color: #04a9ee;
 }
 
@@ -14,4 +16,25 @@
     position: absolute;
     inset: 0;
     box-shadow: inset 0 0 30px #000000cc;
+}
+
+#animated-banner > img {
+    position: absolute;
+    filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.3));
+}
+
+#estetoscopio {
+    top: 10px;
+    left: -450px;
+}
+
+#almohadilla {
+    transform: rotate(-30deg);
+    top: 200px;
+    left: 85px;
+}
+
+#pulsioximetro {
+    transform: rotate(20deg);
+    top: 1350px;
 }
