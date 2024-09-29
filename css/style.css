@@ -1,0 +1,17 @@
+#animated-banner {
+    position: relative;
+    margin: 50px auto;
+    margin-top: 50px;
+    width: 226px;
+    height: 1441px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #04a9ee;
+}
+
+#animated-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 30px #000000cc;
+}
