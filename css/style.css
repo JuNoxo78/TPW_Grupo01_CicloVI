@@ -21,17 +21,155 @@ body {
 #animated-banner > img {
     position: absolute;
     filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.3));
+    filter: blur(3px)
+}
+
+/* Animaciones */
+
+@keyframes fade-in {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(3px);
+    }
+
+    15% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+        filter: blur(0);
+    }
+}
+
+@keyframes mv-estetoscopio {
+    50% {
+        left: 50px;
+        /* left: -900px; */
+        z-index: 1;
+    }
+
+    100% {
+        /* left: -450px; */
+        /* top: 600px; */
+        left: 50px;
+        filter: blur(0);
+        z-index: 1;
+    }
+}
+
+@keyframes mv-almohadilla {
+
+}
+
+@keyframes mv-pinza-dental-1 {}
+
+@keyframes mv-aguja-1 {}
+
+@keyframes mv-pills-1 {}
+
+@keyframes mv-pills-2 {}
+
+@keyframes mv-pills-3 {}
+
+@keyframes mv-espejo-dental {}
+
+@keyframes mv-pinza-dental-2 {}
+
+@keyframes mv-aguja-2 {}
+
+@keyframes mv-ampolla {}
+
+@keyframes mv-curita-1 {}
+
+@keyframes mv-curita-2 {}
+
+@keyframes mv-pulsioximetro {}
+
+/* Posicionamiento */
+
+#prueba {
+    width: 40px;
+    height: 40px;
+    background-color: black;
 }
 
 #estetoscopio {
     top: 10px;
     left: -450px;
+    transition: transform 1.5s ease;
 }
 
 #almohadilla {
     transform: rotate(-30deg);
     top: 200px;
     left: 85px;
+}
+
+#aguja-1 {
+    transform: rotate(-60deg);
+    top: 1000px;
+    left: -150px;
+}
+
+#pinza-dental-1 {
+    transform: rotate(20deg);
+    top: 10px;
+    left: -25px;
+}
+
+#pills-1 {
+    top: 450px;
+    left: 110px;
+}
+
+#pills-2 {
+    transform: rotate(-20deg);
+    top: 1250px;
+    left: 120px;
+}
+
+#pills-3 {
+    transform: rotate(-20deg);
+    top: 190px;
+    left: 20px;
+}
+
+#espejo-dental {
+    transform: rotate(-20deg);
+    top: 750px;
+}
+
+#pinza-dental-2 {
+    transform: rotate(170deg);
+    top: 750px;
+    left: -300px;
+}
+
+#aguja-2 {
+    transform: rotate(120deg);
+    top: 800px;
+    left: 90px;
+}
+
+#ampolla {
+    transform: rotate(30deg);
+    top: 1050px;
+    left: 80px;
+}
+
+#curita-1 {
+    transform: rotate(-30deg);
+    top: 550px;
+    left: 130px;
+}
+
+#curita-2 {
+    transform: rotate(20deg);
+    top: 600px;
 }
 
 #pulsioximetro {
