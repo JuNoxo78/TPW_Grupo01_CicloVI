@@ -1,8 +1,37 @@
 body {
+    background-color: #F6F8F9;
     margin: 38px;
     background-color: rgba(246, 248, 249, 1);
     display: flex;
     justify-content: start;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.main-content {
+    width: 75%;
+}
+
+.header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 45px;
+    color: #09165A;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 0%;
 }
 
 #animated-banner {
