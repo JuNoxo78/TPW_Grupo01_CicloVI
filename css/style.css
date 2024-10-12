@@ -1,15 +1,5 @@
 body {
-    font-family: Arial;
-}
-
-
-h1{
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 25px;
-  font-optical-sizing: auto;
-  font-weight:bolder ;
-  font-style:unset ;
-  text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -21,12 +11,13 @@ header{
     align-items: center;
     padding: 10px;
     box-shadow: 0px 4px 10px 0px ;
+
 }
 
 
 a{
     text-decoration: none;
-    color: #1f618d;
+    color: rgba(18, 24, 87, 1);
     font-family: "Montserrat", sans-serif;
     font-weight: 450px;
     font-size: 15.5px;
@@ -34,9 +25,9 @@ a{
 
 
 #BotonSesion{
-    color: #2e4053;
+    color: rgba(34, 45, 163, 1);
     border-width: 2px;
-    border-color: #2e4053 ;
+    border-color: rgba(34, 45, 163, 1) ;
     border-style: solid;
     border-radius: 25px;
     padding: 8px 12px 8px 12px;
@@ -44,6 +35,12 @@ a{
     margin-left: 5px;
     width: 164px;
     height: 45px;
+    transition: background-color 1s ease; 
+}
+
+#BotonSesion:hover{
+    background-color: rgba(34, 45, 163, 1);
+    color: #fff;
 }
 
 #LogoTelefono{
@@ -51,8 +48,8 @@ a{
     border-width: 2px;
     border-radius: 50%;
     border-style: solid;
-    border-color: #2e4053;
-    background-color: #2e4053;
+    border-color: rgba(34, 45, 163, 1);
+    background-color: rgba(34, 45, 163, 1);
     width: 15px;
     height: 15px;
     color: white;
@@ -94,6 +91,93 @@ nav a{
     width: 168px;
 }
 
+.Container-main{
+    width: 1366px;
+    height: 1922px;
+
+}
+
+.Contenido-Principal{
+    width: 1366px;
+    height: 1225px;
+    background-image: url(/img/Fondo-Section1.png);
+    background-size: 100%;
+}
+
+.Main-top{
+    width: 1366px;
+    height: 615px;
+    border-width:1px;
+    border-bottom:15px;
+    border-bottom-left-radius: 380px;
+    background-image:url(/img/Fondo-article1.jfif);
+    background-size:cover;
+    background-color: rgba(35, 108, 200, 1);
+    padding:226px 44px 131px 44px;
+    gap: 10px;
+    text-align: center;
+}
+
+.Main-top h1{
+    margin-bottom: 40px;
+    font-family:"Montserrat", sans-serif;
+    font-weight:600;
+    font-size:60px;
+    line-height:60px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#Button-cita{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 42.19px;
+    border-color: rgba(18, 24, 87, 1);;
+    padding: 5.09px 14.06px ;
+    gap: 14.06px;
+    background-color: rgba(18, 24, 87, 1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    font-size: 43.27px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);;
+    line-height: 43.37px;
+    width: 576px;
+    height: 85.19px;
+    transition: box-shadow 1s ease;
+}
+
+#Button-cita:hover{
+    box-shadow:0px 0px 20px #fff;
+}
+
+span{
+    color: #00ff88;
+    font-style: oblique;
+}
+
+.Main-button{
+    width: 1366px;
+    height: 610px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    gap: 40px;
+}
+
+.Titulo-main{
+    width: 475px;
+    height: 90px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.Titulo-main h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 38;
+    letter-spacing: -2;
+    color: rgba(0, 162, 145, 1);
+}
 nav a:hover{
     color: aliceblue;
 }
