@@ -4,57 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Essalud</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index_header.css">
+    <link rel="stylesheet" href="css/index_main.css">
+    <link rel="stylesheet" href="css/index_footer.css">
+
 </head>
 
 <body>
-   <header>
+    <header>
         <div class="Logo">
-            <img src="img/Icon_Header.svg" alt="Logo de la empresa" >
+            <img src="img/Icon_Header.svg" alt="Logo de la empresa">
         </div>
+
         <nav>
-            <a href="#" class="Inicio">Inicio <i class="fa-sharp fa-solid fa-caret-down"></i></a> 
-            <a href="#" class="Nosotros" >Nosotros <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            <a href="#" class="Inicio">Inicio <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            <a href="#" class="Nosotros">Nosotros <i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <a href="#" class="Especialidades">Especialidades <i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <a href="#" class="Atencion">Atencion medica <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-            <a href="#" class="Centro">Centro de Ayuda <i class="fa-sharp fa-solid fa-caret-down"></i></a>         
-        </nav> 
+            <a href="#" class="Centro">Centro de Ayuda <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+        </nav>
+
         <div class="Sesion">
             <i class="fa-solid fa-phone" id="LogoTelefono"></i>
             <a href="#" id="BotonSesion">
-            <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-user"></i>
                 Iniciar Sesion
             </a>
-        </div>    
-   </header>
-   <main class="Container-main">
-       <section  class="Contenido-Principal">
-           <article class="Main-top">
+        </div>
+    </header>
+
+    <main class="Container-main">
+        <section class="Contenido-Principal">
+            <article class="Main-top">
                 <h1>Tu salud es nuestra inspiracion</h1>
                 <a href="#" id="Button-cita">Reservar tu cita <span>ONLINE</span></a>
-           </article>
-           <article class="Main-button">
+            </article>
+            <article class="Main-button">
                 <div class="Titulo-main">
                     <h1><i class="fa-sharp fa-solid fa-user-doctor"></i> ¿Por que elegirnos?</h1>
                 </div>
-               
-           </article>
+
+            </article>
         </section>
+
         <section>
-
         </section>
 
-   </main>
-   <footer>
+        <section id="main_2">
+            <div id="divFraseRev">
+                <h1 class="fraseRevolucion">Vive con nosotros la <span>Revolución de la Salud</span></h1>
+            </div>
 
-   </footer>
+            <div id="ubicacion">
+                <div id="ubicacionContent">
+                    <div id="ubicacionText">
+                        <h2>Ubicación</h2>
+                        <div id="ubicacionDireccion">
+                            <p>Avenida Argentina Mz. D3 Lt. 49, Urb. José Carlos Mariategui, Nuevo Chimbote</p>
+                        </div>
+                        <div id="ubicacionButton">
+                            <a href="https://maps.app.goo.gl/5HgTwymNPd2W21DZ8" target="_blank">Localizar en Google
+                                Maps</a>
+                        </div>
+                    </div>
+                    <img src="img/sede.jpg" alt="Sede Bonamedic">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
 </body>
+
 </html>
