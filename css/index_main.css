@@ -200,6 +200,13 @@ nav a:hover{
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
+    transition: all 0.2s ease;
+}
+
+#ubicacionButton:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+    background-color: #00beab;
 }
 
 #ubicacionButton > a {
@@ -211,10 +218,11 @@ nav a:hover{
     color: #ffffff;
 }
 
-#ubicacionContent > img {
+#ubicacionContent img {
     width: 350px;
     border-radius: 9.34px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    transition: box-shadow 0.3s ease;
 }
 /* #endregion */
 
