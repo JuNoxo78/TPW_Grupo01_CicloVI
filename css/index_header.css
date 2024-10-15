@@ -1,5 +1,4 @@
 header{
-    width: 1346px;
     display: flex;
     min-height: 70px;
     background-color: #d7dbdd;
@@ -10,7 +9,7 @@ header{
 }
 
 
-a{
+header a{
     text-decoration: none;
     color: rgba(18, 24, 87, 1);
     font-family: "Montserrat", sans-serif;
@@ -50,10 +49,6 @@ a{
     color: white;
 }
 
-div a:hover{
-    color: aliceblue;
-}
-
 .Logo{
     display: flex;
     padding-left: 20px;
@@ -68,6 +63,10 @@ div a:hover{
 nav a{
     height: 32px;
     margin-right: 10px;
+}
+
+nav a:hover{
+    color: aliceblue;
 }
 
 .Nosotros{

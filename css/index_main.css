@@ -1,11 +1,4 @@
-
-.Container-main{
-    width: 1366px;
-
-}
-
 .Contenido-Principal{
-    width: 1366px;
     background-image: url(/img/Fondo-Section1.png);
     background-size: cover;
     background-position: center;
@@ -46,9 +39,8 @@
     background-color: rgba(18, 24, 87, 1);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
     font-size: 43.27px;
-    font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    color: rgba(255, 255, 255, 1);;
+    color: rgba(255, 255, 255, 1);
     line-height: 43.37px;
     width: 576px;
     height: 85.19px;
@@ -60,13 +52,12 @@
     transform: scale(0.5 , 0.5);
 }
 
-span{
+#Button-cita span{
     color: #00ff88;
     font-style: oblique;
 }
 
 .Main-button{
-    width:1366px;
     height:610px;
     padding-top: 50px;
     padding-bottom: 60px;
@@ -133,10 +124,6 @@ span{
     color: rgba(23, 31, 112, 1);
 }
 
-nav a:hover{
-    color: aliceblue;
-}
-
 @media (max-width:700px){
     header{
         flex-direction: column;
@@ -146,6 +133,7 @@ nav a:hover{
         padding: 10px 0px;
     }
 }
+
  /* #region Main_2 */
 
 /* #region General */
