@@ -1,6 +1,8 @@
-.Contenido-Principal{
+.Container-main{
     width: 1366px;
-    height: 1225px;
+}
+
+.Contenido-Principal {
     background-image: url(/img/Fondo-Section1.png);
     background-size: 100%;
 }
@@ -45,20 +47,18 @@
     width: 576px;
     height: 85.19px;
     transition: box-shadow 1s ease;
+    span{
+        color: #00ff88;
+        font-style: oblique;
+    }
 }
 
 #Button-cita:hover{
     box-shadow:0px 0px 20px #fff;
 }
 
-span{
-    color: #00ff88;
-    font-style: oblique;
-}
-
 .Main-button{
     width: 1366px;
-    height: 610px;
     padding-top: 50px;
     padding-bottom: 60px;
     gap: 40px;
@@ -136,12 +136,11 @@ nav a:hover{
     font-size: 37px;
     font-weight: 400;
     color: #121857;
-}
-
-.fraseRevolucion > span {
-    font-size: 48px;
-    font-weight: 600;
-    color: #00C4B0;
+    span {
+        font-size: 48px;
+        font-weight: 600;
+        color: #00C4B0;
+    }
 }
 /* #endregion */
 

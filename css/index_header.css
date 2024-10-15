@@ -13,7 +13,6 @@ header{
 a{
     text-decoration: none;
     color: rgba(18, 24, 87, 1);
-    font-family: "Montserrat", sans-serif;
     font-weight: 450px;
     font-size: 15.5px;
 }
@@ -50,10 +49,6 @@ a{
     color: white;
 }
 
-div a:hover{
-    color: aliceblue;
-}
-
 .Logo{
     display: flex;
     padding-left: 20px;
@@ -84,10 +79,4 @@ nav a{
 
 .Centro{
     width: 168px;
-}
-
-.Container-main{
-    width: 1366px;
-    height: 1922px;
-
 }
