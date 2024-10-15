@@ -2,7 +2,9 @@ const button = document.getElementById('ubicacionButton');
 const imageDiv = document.getElementById('imagenSede');
 const image = document.querySelector('#imagenSede img');
 const ubicacionText = document.getElementById
-('ubicacionText');
+    ('ubicacionText');
+const rrssIconsLinks = document.getElementsByClassName('iconsLinks');
+const rrssIcons = document.querySelector('#rrssIcons i');
 
 button.addEventListener('mouseover', () => {
     ubicacionText.style.transition = "text-shadow 0.2s ease";

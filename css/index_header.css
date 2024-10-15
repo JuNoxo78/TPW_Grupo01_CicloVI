@@ -1,86 +1,140 @@
 header{
-    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 12.4px 80px;
+    background-color: rgb(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.25);
     min-height: 70px;
-    background-color: #d7dbdd;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0px 4px 10px 0px ;
-}
 
-
-header a{
-    text-decoration: none;
-    color: rgba(18, 24, 87, 1);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 450px;
-    font-size: 15.5px;
-}
-
-
-#BotonSesion{
-    color: rgba(34, 45, 163, 1);
-    border-width: 2px;
-    border-color: rgba(34, 45, 163, 1) ;
-    border-style: solid;
-    border-radius: 25px;
-    padding: 8px 12px 8px 12px;
-    margin-right: 20px;
-    margin-left: 5px;
-    width: 164px;
-    height: 45px;
-    transition: background-color 1s ease; 
-}
-
-#BotonSesion:hover{
-    background-color: rgba(34, 45, 163, 1);
-    color: #fff;
-}
-
-#LogoTelefono{
-    padding: 7px;
-    border-width: 2px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: rgba(34, 45, 163, 1);
-    background-color: rgba(34, 45, 163, 1);
-    width: 15px;
-    height: 15px;
-    color: white;
-}
-
-.Logo{
     display: flex;
-    padding-left: 20px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
 }
 
-
-.Logo img{
-    width: 100px;
-    height: 70.23px;
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    
+    nav{
+        padding: 10px 0px;
+    }
 }
 
-nav a{
-    height: 32px;
-    margin-right: 10px;
+/* #region HeaderLogo */
+.logo a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    p {
+        color: #222DA3;
+        font-size: 17.03px;
+        font-weight: 500;
+        span {
+            color: #00C4B0;
+            font-weight: 700;
+        }
+    }
+}
+
+.logo img{
+    width: 51px;
+}
+/* #endregion */
+
+/* #region HeaderNav */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 23px;
+    width: 100%;
+
+    a {
+        color: #121857;
+        font-size: 15.5px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        padding: 8px;
+    }
+}
+
+.fa-chevron-down {
+    font-weight: 350;
 }
 
 nav a:hover{
-    color: aliceblue;
+    color: #1b237d;
+    transform: scale(1.05);
+}
+/* #endregion */
+
+/* #region HeaderContactLogin */
+.contactLogin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    
+    a {
+        white-space: nowrap;
+    }
 }
 
-.Nosotros{
-    width: 107px;
+#logoTelefono{
+    border-radius: 30px;
+    background-color: rgba(34, 45, 163, 1);
+    width: 45px;
+    height: 45px;
+    transition: all 0.2s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        color: white;
+        font-size: 22px;
+    }
 }
 
-.Especialidades{
-    width: 153px;
+#logoTelefono:hover {
+    transform: scale(1.1);
 }
 
-.Atencion{
-    width: 169px;
+#botonSesion{
+    color: rgba(34, 45, 163, 1);
+    border: 2px solid rgba(34, 45, 163, 1);
+    border-radius: 25px;
+    padding: 0px 18px;
+    height: 45px;
+    transition: background-color 0.2s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    i {
+        font-size: 21px;
+        font-weight: 400;
+    }
 }
 
-.Centro{
-    width: 168px;
+#botonSesion:hover{
+    background-color: rgba(34, 45, 163, 1);
+    color: #fff;
 }
+/* #endregion */

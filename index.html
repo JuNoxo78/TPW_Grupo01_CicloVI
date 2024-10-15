@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 
     <!---AwesomeFonts--->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
 
     <!--#endregion-->
 
@@ -34,74 +34,120 @@
 
 <body>
     <header>
-        <div class="Logo">
-            <a href="#"><img src="img/Icon_Header.svg" alt="Logo de la empresa" ></a>   
+        <div class="logo">
+            <a href="#">
+                <img src="img/icon_1.png" alt="Logo de la empresa">
+                <p>Bona<span>medic</span></p>
+            </a>
         </div>
+
         <nav>
-            <a href="#" class="Inicio">Inicio <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-            <a href="#" class="Nosotros">Nosotros <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-            <a href="#" class="Especialidades">Especialidades <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-            <a href="#" class="Atencion">Atencion medica <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-            <a href="#" class="Centro">Centro de Ayuda <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            <a href="#" class="Inicio">
+                Inicio
+            </a>
+
+            <a href="#" class="Nosotros">
+                Nosotros
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a href="#" class="Especialidades">
+                Especialidades
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a href="#" class="Atencion">
+                Atencion médica
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <a href="#" class="Centro">
+                Centro de Ayuda
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
         </nav>
 
-        <div class="Sesion">
-            <i class="fa-solid fa-phone" id="LogoTelefono"></i>
-            <a href="Login.html" id="BotonSesion">
-            <i class="fa-regular fa-user"></i>
+        <div class="contactLogin">
+            <a id="logoTelefono" href="#">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+
+            <a href="html/login.html" id="botonSesion">
+                <i class="fa-light fa-user"></i>
                 Iniciar Sesion
             </a>
-        </div>    
-   </header>
-   <main class="Container-main">
-        <section  class="Contenido-Principal">
-           <article class="Main-top">
-             <div>
+        </div>
+    </header>
+
+    <main>
+        <section class="main_1">
+            <article class="main_top">
                 <h1>Tu salud es nuestra inspiracion</h1>
-                <a href="#" id="Button-cita">Reservar tu cita <span>ONLINE</span></a>
-             </div>
-           </article>
-           <article class="Main-button">
-                <div class="Titulo-main">
-                    <h1><i class="fa-solid fa-user-doctor"></i> ¿Por que elegirnos?</h1>
+
+                <a href="#" id="buttonCita">
+                    <p>
+                        Reserva tu cita <span>ONLINE</span>
+                    </p>
+                </a>
+            </article>
+
+            <article class="mainOptions">
+                <div class="tituloOptions">
+                    <h1>
+                        <div><i class="fa-solid fa-user-doctor"></i></div>
+                        ¿Por qué elegirnos?
+                    </h1>
                 </div>
-                <div class="Container-image">
+
+                <div class="itemsMainOptions">
                     <div class="Item-image">
-                        <img src="img/Foto-imageItem1.jfif">
-                        <h2>Medicos Especializados</h2>
-                        <p>Contamos con Profesionales altamente
-                            capacitados en diversas especialidades 
-                            para ofrecer diagnosticos y tratamientos precisos
-                        </p>
+                        <img src="img/main_1_options_1.png">
+
+                        <div class="itemText">
+                            <h2>Medicos Especializados</h2>
+
+                            <p>Contamos con Profesionales altamente
+                                capacitados en diversas especialidades
+                                para ofrecer diagnosticos y tratamientos precisos
+                            </p>
+                        </div>
                     </div>
+
                     <div class="Item-image">
-                        <img src="img/Foto-imageItem2.jfif">
-                        <h2>Calidad Huamana</h2>
-                        <p>Contamos con profesionales altamente capacitados 
-                            en diversas especialidades para ofrecer 
-                            diagnósticos y tratamientos precisos.
-                        </p>
+                        <img src="img/main_1_options_2.png">
+
+                        <div class="itemText">
+                            <h2>Calidad Humana</h2>
+                            <p>Nuestro equipo se destaca por brindar una atención cálida, centrada en las necesidades
+                                de cada paciente.
+                            </p>
+                        </div>
                     </div>
+
                     <div class="Item-image">
-                        <img src="img/Foto-imageItem3.jfif">
-                        <h2>Accesibilidad</h2>
-                        <p>Contamos con profesionales altamente capacitados
-                           en diversas especialidades para ofrecer
-                            diagnósticos y tratamientos precisos.
-                        </p>
+                        <img src="img/main_1_options_3.png">
+
+                        <div class="itemText">
+                            <h2>Accesibilidad</h2>
+                            <p>Facilitamos el acceso a la salud a través de precios asequibles y campañas médicas, y una
+                                plataforma digital de vanguardia.
+                            </p>
+                        </div>
                     </div>
+
                     <div class="Item-image">
-                        <img src="img/Foto-imageItem4.jfif">
-                        <h2>Evaluacion Integral</h2>
-                        <p>Contamos con profesionales altamente
-                           capacitados en diversas especialidades
-                           para ofrecer diagnósticos y tratamientos precisos.
-                        </p>
+                        <img src="img/main_1_options_4.png">
+
+                        <div class="itemText">
+                            <h2>Evaluación Integral</h2>
+                            <p>Realizamos un análisis completo de cada caso, considerando todos los aspectos necesarios
+                                para un tratamiento efectivo y personalizado.
+                            </p>
+                        </div>
                     </div>
                 </div>
-           </article>
+            </article>
         </section>
-        
+
         <section id="main_2">
             <div id="divFraseRev">
                 <h1 class="fraseRevolucion">Vive con nosotros la <span>Revolución de la Salud</span></h1>
@@ -258,16 +304,30 @@
             <div id="redesSociales">
                 <p>Visítanos en:</p>
                 <div id="rrssIcons">
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-tiktok"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="http://twitter.com/BonaMedic" target="_blank" class="iconsLinks">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="https://instagram.com/bonamedicperu" target="_blank" class="iconsLinks">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/@bonamedic" target="_blank" class="iconsLinks">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://bit.ly/3V0RHXF" target="_blank" class="iconsLinks">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="http://linkedin.com/company/bonamedic" target="_blank" class="iconsLinks">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
             <div id="libroReclamaciones">
                 <i class="fa-solid fa-book-open-reader"></i>
-                <p>Libro de Reclamaciones</p>
+                <a href="#">Libro de Reclamaciones</a>
             </div>
         </div>
 

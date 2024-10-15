@@ -1,140 +1,167 @@
-.Contenido-Principal{
-    background-image: url(/img/Fondo-Section1.png);
+/* #region main_1 */
+
+/* #region General */
+.main_1 {
+    background-image: url(../img/main_1_bk.png);
     background-size: cover;
     background-position: center;
 }
 
-.Main-top{
-    width: 100%;
+/* #endregion general */
+
+/* #region MainTop */
+.main_top {
     height: 615px;
-    border-width:1px;
-    border-bottom:15px;
+    padding: 226px 44px 131px;
     border-bottom-left-radius: 380px;
-    padding-bottom: 131px;
     border-bottom: 15px solid rgba(35, 108, 200, 1);
-    background-image:url(/img/Fondo-article1.jfif);
-    background-size:cover;
-    background-color: rgba(35, 108, 200, 1);
+    background-image: url(../img/main_1_top_bk.png);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     gap: 10px;
-    text-align: center;
 }
 
-.Main-top div{
-    padding-top: 200px;
-}
-.Main-top h1{
-    margin-bottom: 40px;
-    font-family:"Montserrat", sans-serif;
-    font-weight:600;
-    font-size:60px;
-    line-height:60px;
+.main_top h1 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
     color: rgba(255, 255, 255, 1);
-} 
+    text-shadow: 0 0 20px black;
+    padding: 20px 0;
+}
 
-#Button-cita{
-    border: 1px solid rgba(18, 24, 87, 1);
+#buttonCita {
     border-radius: 42.19px;
-    padding: 5.09px 14.06px ;
-    gap: 14.06px;
-    background-color: rgba(18, 24, 87, 1);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    background: linear-gradient(to right, #121857, #222DA3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     font-size: 43.27px;
     font-weight: 600;
     color: rgba(255, 255, 255, 1);
-    line-height: 43.37px;
     width: 576px;
-    height: 85.19px;
-    transition: box-shadow 1s ease;
+    padding: 22px 14.1px;
+    transition: all 0.2s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    span {
+        color: #00F8DC;
+        font-style: oblique;
+    }
 }
 
-#Button-cita:hover{
-    box-shadow:0px 0px 20px #fff;
-    transform: scale(0.5 , 0.5);
+#buttonCita:hover {
+    box-shadow: 0px 0px 20px rgb(255, 255, 255, 0.4);
+    transform: scale(1.02);
+    background: linear-gradient(to right, #182077, #2834c1);
 }
 
-#Button-cita span{
-    color: #00ff88;
-    font-style: oblique;
-}
+/* #endregion */
 
-.Main-button{
-    height:610px;
+/* #region MainOptions */
+.mainOptions {
     padding-top: 50px;
-    padding-bottom: 60px;
-    gap:40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
 }
 
-.Titulo-main{
-    width:auto;
-    height: 90px;
-    padding: 10px;
+.tituloOptions {
+    padding: 0 90px;
+}
+
+.tituloOptions h1 {
+    padding: 10px 0;
+    font-size: 38px;
+    font-weight: 600;
+    color: rgba(0, 162, 145, 1);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
 }
 
-.Titulo-main h1{
-    font-family: "Montserrat", sans-serif;
-    font-size: 38px;
-    font-weight: 600;
-    line-height: 38px;
-    color: rgba(0, 162, 145, 1);
-    padding-left: 100px;
-}
-
-.Titulo-main i{
-    background-color:  rgba(0, 162, 145, 1);;
-    border: 2px solid transparent;
+.tituloOptions div {
+    background-color: rgba(0, 162, 145, 1);
+    ;
     border-radius: 50%;
     padding: 10px;
+    width: 70px;
+    height: 70px;
     color: rgba(255, 255, 255, 1);
-}
 
-.Container-image{
     display: flex;
-    height: 370px;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.Container-image div{
-    width: 268px;
-    height: 370px;
-    text-align: center;
-    margin: auto 10px;
-}   
+.itemsMainOptions {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
 
-.Item-image img{
+    padding: 0 95px 60px 95px;
+    gap: auto;
+}
+
+.Item-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    gap: 40px;
+}
+
+.Item-image img {
+    object-fit: cover;
     width: 205PX;
     height: 205PX;
-    border: 2px solid transparent;
+    object-position: center;
     border-radius: 50%;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.Item-image h2{
-    font-size: 20px;
-    font-weight: 700;
-    color: rgba(23, 31, 112, 1);
-    margin-bottom: 15px;
-}
+.itemText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 10px;
+    text-align: center;
 
-.Item-image p{
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 19.5px;
-    color: rgba(23, 31, 112, 1);
-}
-
-@media (max-width:700px){
-    header{
-        flex-direction: column;
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #171f70;
     }
-    
-    nav{
-        padding: 10px 0px;
+
+    p {
+        font-size: 15px;
+        font-weight: 420;
+        line-height: 130%;
+        color: #171f70;
+        width: 251px;
     }
 }
+/* #endregion */
 
- /* #region Main_2 */
+/* #endregion */
+
+/* #region Main_2 */
 
 /* #region General */
 #main_2 {
@@ -158,6 +185,7 @@
     opacity: 0.3;
     z-index: -1;
 }
+
 /* #endregion */
 
 /* #region Frase_Revolucion */
@@ -178,12 +206,15 @@
     font-size: 37px;
     font-weight: 400;
     color: #121857;
+
     span {
         font-size: 48px;
         font-weight: 600;
         color: #00C4B0;
+        font-style: oblique;
     }
 }
+
 /* #endregion */
 
 /* #region Ubicacion */
@@ -205,7 +236,7 @@
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35)
 }
 
-#ubicacionText > h2 {
+#ubicacionText>h2 {
     font-size: 35px;
     font-weight: 600;
 }
@@ -216,11 +247,11 @@
     gap: 10px;
 }
 
-#ubicacionDireccion > i {
+#ubicacionDireccion>i {
     font-size: 29px;
 }
 
-#ubicacionDireccion > p {
+#ubicacionDireccion>p {
     font-size: 23px;
     font-weight: 400;
     text-align: center;
@@ -236,7 +267,7 @@
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
 }
 
-#ubicacionButton > a {
+#ubicacionButton>a {
     width: 100%;
     padding: 15px 0;
     text-align: center;
@@ -256,6 +287,7 @@
 #imagenSede img {
     width: 350px;
 }
+
 /* #endregion */
 
 /* #endregion */

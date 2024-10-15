@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: row;
     gap: 6px;
-    align-items: center;    
+    align-items: center;
 
     i {
         font-size: 13px;
@@ -93,6 +93,7 @@
     color: #464646;
     line-height: 140%;
 }
+
 /* #endregion */
 
 /* #region OficinasElement */
@@ -105,6 +106,7 @@
 #oficinasElement>div {
     gap: 24px;
 }
+
 /* #endregion */
 
 /* #region ContactoElement */
@@ -117,6 +119,7 @@
 #contactoElement>div {
     gap: 24px;
 }
+
 /* #endregion */
 
 /* #region SeccionesElement */
@@ -125,6 +128,7 @@
     display: flex;
     flex-direction: column;
 }
+
 /* #endregion */
 
 /* #region NosotrosElement */
@@ -154,6 +158,8 @@
     gap: 10px;
     width: 100%;
 
+
+
     p {
         font-size: 17.03px;
         font-weight: 600;
@@ -164,10 +170,24 @@
     display: flex;
     flex-direction: row;
     gap: 16px;
+}
 
-    i {
-        font-size: 24px;
-    }
+#rrssIcons i {
+    transition: all 0.1s linear;
+    font-size: 24px;
+}
+
+#rrssIcons a {
+    color: black;
+}
+
+#rrssIcons a:hover i {
+    transform: scale(1.1);
+    color: rgb(29, 29, 29);
+}
+
+#rrssIcons a:active i {
+    color: #01695F;
 }
 
 #libroReclamaciones {
@@ -175,17 +195,24 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    transition: transform 0.1s linear;
 
     i {
         font-size: 24px;
+        text-decoration: none;
     }
 
-    p {
+    a {
         font-size: 17.03px;
         font-weight: 600;
         white-space: nowrap;
     }
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
+
 /* #endregion */
 
 /* #region Footer Bottom*/
@@ -203,4 +230,5 @@
         font-weight: 600;
     }
 }
+
 /* #endregion */
