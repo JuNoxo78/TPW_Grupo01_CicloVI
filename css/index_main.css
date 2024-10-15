@@ -146,13 +146,7 @@ nav a:hover{
 
 /* #region Ubicacion */
 #ubicacion {
-    padding: 100px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-#ubicacionContent {
-    width: 912px;
+    padding: 100px 247.25px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -165,20 +159,19 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     gap: 60px;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35)
 }
 
 #ubicacionText > h2 {
-    color: #ffffff;
     font-size: 35px;
     font-weight: 600;
-    text-shadow: 0px 0px 10px #ffffff66;
 }
 
 #ubicacionDireccion {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #ffffff;
 }
 
 #ubicacionDireccion > i {
@@ -189,7 +182,6 @@ nav a:hover{
     font-size: 23px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0px 0px 10px #ffffff66;
 }
 
 #ubicacionButton {
@@ -200,13 +192,6 @@ nav a:hover{
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
-    transition: all 0.2s ease;
-}
-
-#ubicacionButton:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
-    background-color: #00beab;
 }
 
 #ubicacionButton > a {
@@ -218,11 +203,16 @@ nav a:hover{
     color: #ffffff;
 }
 
-#ubicacionContent img {
+#imagenSede {
     width: 350px;
+    height: 291px;
+    overflow: clip;
     border-radius: 9.34px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
+}
+
+#imagenSede img {
+    width: 350px;
 }
 /* #endregion */
 
