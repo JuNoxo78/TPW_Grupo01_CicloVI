@@ -28,7 +28,7 @@
 
 /* #region Footer Navigation */
 
-/** #region CommonAtributes **/
+/* #region CommonAtributes */
 #footerNav {
     padding: 30px 95px;
     display: flex;
@@ -74,9 +74,9 @@
 }
 
 .navElementF h3 {
-    font-family: "Lato", sans-serif;
+    font-family: "Maven Pro", sans-serif;
     font-size: 14px;
-    font-weight: 550;
+    font-weight: 470;
     color: #464646;
     line-height: 140%;
 }
@@ -93,10 +93,9 @@
     color: #464646;
     line-height: 140%;
 }
+/* #endregion */
 
-/** #endregion **/
-
-/** #region OficinasElement **/
+/* #region OficinasElement */
 #oficinasElement {
     width: 306px;
     display: flex;
@@ -106,9 +105,9 @@
 #oficinasElement>div {
     gap: 24px;
 }
-/** #endregion **/
+/* #endregion */
 
-/** #region ContactoElement **/
+/* #region ContactoElement */
 #contactoElement {
     width: 340px;
     display: flex;
@@ -118,27 +117,90 @@
 #contactoElement>div {
     gap: 24px;
 }
+/* #endregion */
 
-/** #endregion **/
-
-/** #region SeccionesElement **/
+/* #region SeccionesElement */
 #seccionesElement {
     width: auto;
     display: flex;
     flex-direction: column;
 }
+/* #endregion */
 
-/** #endregion **/
-
-/** #region NosotrosElement **/
+/* #region NosotrosElement */
 #nosotrosElement {
     width: auto;
     display: flex;
     flex-direction: column;
 }
 
-/** #endregion **/
+/* #endregion */
 
 /* #endregion*/
 
 /* #region Footer Middle */
+#footerMid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 80px;
+    border-top: rgb(0, 0, 0, 0.1) solid 1px;
+}
+
+#redesSociales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    p {
+        font-size: 17.03px;
+        font-weight: 600;
+    }
+}
+
+#rrssIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    i {
+        font-size: 24px;
+    }
+}
+
+#libroReclamaciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 17.03px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+}
+/* #endregion */
+
+/* #region Footer Bottom*/
+#footerBottom {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #171F70;
+
+    p {
+        color: white;
+        font-size: 17.03px;
+        font-weight: 600;
+    }
+}
+/* #endregion */
