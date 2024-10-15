@@ -4,29 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Essalud</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!--#region Fonts-->
+
+    <!---Montserrat--->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!---Maven Pro--->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+
+    <!---AwesomeFonts--->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <!--#endregion-->
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index_header.css">
+    <link rel="stylesheet" href="css/index_main.css">
+    <link rel="stylesheet" href="css/index_footer.css">
+
 </head>
 
 <body>
-   <header>
+    <header>
         <div class="Logo">
-            <a href="#"><img src="img/Icon_Header.svg" alt="Logo de la empresa" ></a>
+            <a href="#"><img src="img/Icon_Header.svg" alt="Logo de la empresa" ></a>   
         </div>
         <nav>
-            <a href="#" class="Inicio">Inicio <i class="fa-sharp fa-solid fa-caret-down"></i></a> 
-            <a href="#" class="Nosotros" >Nosotros <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            <a href="#" class="Inicio">Inicio <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            <a href="#" class="Nosotros">Nosotros <i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <a href="#" class="Especialidades">Especialidades <i class="fa-sharp fa-solid fa-caret-down"></i></a>
             <a href="#" class="Atencion">Atencion medica <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-            <a href="#" class="Centro">Centro de Ayuda <i class="fa-sharp fa-solid fa-caret-down"></i></a>         
-        </nav> 
+            <a href="#" class="Centro">Centro de Ayuda <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+        </nav>
+
         <div class="Sesion">
             <i class="fa-solid fa-phone" id="LogoTelefono"></i>
             <a href="Login.html" id="BotonSesion">
@@ -84,9 +102,181 @@
            </article>
         </section>
         
-   </main>
-   <footer>
+        <section id="main_2">
+            <div id="divFraseRev">
+                <h1 class="fraseRevolucion">Vive con nosotros la <span>Revolución de la Salud</span></h1>
+            </div>
+            <div id="ubicacion">
+                <div id="ubicacionContent">
+                    <div id="ubicacionText">
+                        <h2>Ubicación</h2>
+                        <div id="ubicacionDireccion">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Avenida Argentina Mz. D3 Lt. 49, Urb. José Carlos Mariategui, Nuevo Chimbote</p>
+                        </div>
+                        <div id="ubicacionButton">
+                            <a href="https://maps.app.goo.gl/5HgTwymNPd2W21DZ8" target="_blank">Localizar en Google
+                                Maps</a>
+                        </div>
+                    </div>
+                    <img src="img/sede.jpg" alt="Sede Bonamedic">
+                </div>
+            </div>
+        </section>
+    </main>
 
-   </footer>
+    <footer>
+        <div id="footerTitle">
+            <div id="logoFooterTitle">
+                <img src="img/icon_1.png">
+                <p>Centro Médico Bona<span>medic</span></p>
+            </div>
+        </div>
+
+        <div id="footerNav">
+            <!--Oficinas Element-->
+            <div class="navElementF" id="oficinasElement">
+                <h2>Oficinas</h2>
+
+                <div class="navGroupItems">
+                    <div class="navSubSections">
+                        <h3>CITAS Y RESULTADOS</h3>
+
+                        <div id="horario" class="navFooterItems">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>Lunes a Sábados: 7:00am - 6:00pm</p>
+                        </div>
+
+                        <div id="direccionNavF" class="navFooterItems">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Urb. José Carlos Mariátegui: Av. Argentina, Mz. D3 Lt. 49</p>
+                        </div>
+                    </div>
+
+                    <div class="navSubSections">
+                        <h3>RAZÓN SOCIAL</h3>
+
+                        <div id="nombreRazon" class="navFooterItems">
+                            <i class="fa-regular fa-hospital"></i>
+                            <p>Corporación Bonamedic S.A.C.</p>
+                        </div>
+
+                        <div id="rucNumber" class="navFooterItems">
+                            <i class="fa-solid fa-registered"></i>
+                            <p>20609156261</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Contacto Element-->
+            <div class="navElementF" id="contactoElement">
+                <h2>Contacto</h2>
+
+                <div class="navGroupItems">
+                    <div class="navSubSections">
+                        <h3>TELÉFONO INFORMATIVO</h3>
+
+                        <div id="labCitasNumber" class="navFooterItems">
+                            <i class="fa-solid fa-phone"></i>
+                            <a>Laboratorio y citas......................................943 082 143</a>
+                        </div>
+                    </div>
+
+                    <div class="navSubSections">
+                        <h3>CORREO ELECTRÓNICO</h3>
+
+                        <div id="email" class="navFooterItems">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a>Contacto...................bonamedicperu@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Secciones Element-->
+            <div class="navElementF" id="seccionesElement">
+                <h2>Secciones</h2>
+
+                <div class="navGroupItems">
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Inicio</a>
+                    </div>
+
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Especialidades</a>
+                    </div>
+
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Atención Médica</a>
+                    </div>
+
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Centro de Ayuda</a>
+                    </div>
+
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Plataforma Online</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Nosotros Element-->
+            <div class="navElementF" id="nosotrosElement">
+                <h2>Nosotros</h2>
+
+                <div class="navGroupItems">
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>¿Por qué elegirnos?</a>
+                    </div>
+
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Misión y Visión</a>
+                    </div>
+
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Campañas Médicas</a>
+                    </div>
+
+                    <div class="navFooterItems">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a>Staff Médico</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footerMid">
+            <div id="redesSociales">
+                <p>Visítanos en:</p>
+                <div id="rrssIcons">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div id="libroReclamaciones">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <p>Libro de Reclamaciones</p>
+            </div>
+        </div>
+
+        <div id="footerBottom">
+            <p>© 2024 Bonamedic. Todos los derechos reservados.</p>
+        </div>
+
+        </div>
+    </footer>
 </body>
+
 </html>
