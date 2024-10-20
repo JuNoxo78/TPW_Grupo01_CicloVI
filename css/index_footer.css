@@ -158,11 +158,10 @@
     gap: 10px;
     width: 100%;
 
-
-
     p {
         font-size: 17.03px;
         font-weight: 600;
+        color: #01695F;
     }
 }
 
@@ -175,10 +174,7 @@
 #rrssIcons i {
     transition: all 0.1s linear;
     font-size: 24px;
-}
-
-#rrssIcons a {
-    color: black;
+    color: #464646;
 }
 
 #rrssIcons a:hover i {
@@ -195,21 +191,34 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    transition: transform 0.1s linear;
 
     i {
         font-size: 24px;
         text-decoration: none;
+        color: #464646;
+        transition: all 0.1s linear;
     }
 
     a {
         font-size: 17.03px;
         font-weight: 600;
         white-space: nowrap;
+        color: #464646;
+        transition: all 0.1s linear;
     }
 
     a:hover {
         text-decoration: underline;
+    }
+}
+
+#libroReclamaciones:hover {
+    i {
+        color: rgb(29, 29, 29);
+    }
+
+    a {
+        color: rgb(29, 29, 29);
     }
 }
 

@@ -42,25 +42,25 @@
         </div>
 
         <nav>
-            <a href="#" class="Inicio">
+            <a href="#">
                 Inicio
             </a>
 
-            <a href="#" class="Nosotros">
+            <a id="headerNav-nosotros">
                 Nosotros
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
 
-            <a href="#" class="Especialidades">
+            <a href="#" id="headerNav-especialidades">
                 Especialidades
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
 
-            <a href="#" class="Atencion">
+            <a href="#" id="headerNav-atencionMedica">
                 Atencion médica
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
-            <a href="#" class="Centro">
+            <a href="#" id="headerNav-centroAyuda">
                 Centro de Ayuda
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
@@ -76,6 +76,30 @@
                 Iniciar Sesion
             </a>
         </div>
+
+        <dialog id="headerMenu-nosotros">
+            <div id="hm-nosotros-all">
+                <div id="hm-nosotros-content">
+                    <div id="hm-nosotros-options">
+                    </div>
+                    <div id="hm-nosotros-info">
+    
+                    </div>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="menu-especialidades">
+
+        </dialog>
+
+        <dialog id="menu-atencionMedica">
+
+        </dialog>
+
+        <dialog id="menu-centroAyuda">
+
+        </dialog>
     </header>
 
     <main>
@@ -338,7 +362,8 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/index_transitions.js"></script>
+    <script src="js/headerNav_menus.js"></script>
 </body>
 
 </html>
