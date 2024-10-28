@@ -1,0 +1,20 @@
+html {
+    scroll-behavior: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #222DA3 lightblue;
+    width: 100vw;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div[id] {
+    scroll-margin-top: 95px;
+}

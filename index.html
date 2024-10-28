@@ -25,7 +25,7 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/index_header.css">
     <link rel="stylesheet" href="css/index_main.css">
     <link rel="stylesheet" href="css/index_footer.css">
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="areaHeaderPlusMenu">
         <div class="logo">
             <a href="#">
                 <img src="img/icon_1.png" alt="Logo de la empresa">
@@ -42,25 +42,25 @@
         </div>
 
         <nav>
-            <a href="#" class="Inicio">
+            <a href="#">
                 Inicio
             </a>
 
-            <a href="#" class="Nosotros">
+            <a id="headerNav-nosotros">
                 Nosotros
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
 
-            <a href="#" class="Especialidades">
+            <a href="#" id="headerNav-especialidades">
                 Especialidades
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
 
-            <a href="#" class="Atencion">
+            <a href="#" id="headerNav-atencionMedica">
                 Atencion médica
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
-            <a href="#" class="Centro">
+            <a href="#" id="headerNav-centroAyuda">
                 Centro de Ayuda
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
@@ -77,6 +77,40 @@
             </a>
         </div>
     </header>
+
+    <dialog id="headerMenu-nosotros" >
+        <div id="hm-nosotros-all">
+            <div id="hm-nosotros-content">
+                <div id="hm-nosotros-options">
+                    <a>¿Por qué elegirnos?</a>
+                    <a>Misión y Visión</a>
+                    <a>Campañas Médicas</a>
+                    <a>Staff Médico</a>
+                </div>
+                <div id="hm-nosotros-info">
+                    <h3>Atiéndete con nosotros. Descubre donde nos puedes encontrar.</h3>
+                    <div id="hm-nosotros-buttonImage">
+                        <a>Descubre más</a>
+                        <div>
+                            <img src="img/navNosotros-img.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="menu-especialidades">
+
+    </dialog>
+
+    <dialog id="menu-atencionMedica">
+
+    </dialog>
+
+    <dialog id="menu-centroAyuda">
+
+    </dialog>
 
     <main>
         <section class="main_1">
@@ -338,7 +372,8 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/index_transitions.js"></script>
+    <script src="js/headerNav_menus.js"></script>
 </body>
 
 </html>
