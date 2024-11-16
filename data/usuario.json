@@ -1,0 +1,14 @@
+[
+    {
+        "usuario_id": "001",
+        "nombres": "Juan Andre López Córdova",
+        "dni": "72134466",
+        "sexo": "Masculino",
+        "contraseña": "*******",
+        "telefono": "947411398",
+        "email": "jjjj@gmail.com",
+        "fechaCreacion": "30/03/2024",
+        "fechaUltimoAcceso": "04/11/2024",
+        "descuentoBase": "0%"
+    }
+]

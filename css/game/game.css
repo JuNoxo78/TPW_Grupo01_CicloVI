@@ -1,0 +1,132 @@
+#game-button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    bottom: 25px;
+    left: calc(100vw - 85px);
+    z-index: 1150;
+
+    height: 60px;
+    width: 60px;
+
+    border-radius: 60px;
+    background: linear-gradient(to right, #121857, #222DA3);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
+
+    i {
+        font-size: 25px;
+        color: white;
+    }
+}
+
+#game-dialog {
+    box-sizing: border-box;
+    position: fixed;
+    border: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1200;
+    background: none;
+    padding: 0;
+
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#body-game {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.body-game-in {
+    animation: bodyGameIn 0.4s forwards;
+}
+
+@keyframes bodyGameIn {
+    from {
+        background-color: none;
+    }
+    to {
+        background-color: rgb(0, 0, 0, 0.25);
+    }
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #171F70;
+
+    border-radius: 20px;
+    background-image: url(../../img/game/background.gif);
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: inset 0 4px 200px 30px rgb(0, 0, 0);
+}
+
+.game-container-in {
+    animation: gameContainerIn 0.4s ease;
+}
+
+@keyframes gameContainerIn {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#game-close-button {
+    outline: none;
+    position: relative;
+    top: 20px;
+    left: calc(100% - 73.33px);
+    width: 53.33px;
+    height: 53.33px;
+    border: none;
+    background: rgb(211, 21, 21, 0.7);
+    border-radius: 5px;
+    transition: background 0.1s;
+}
+
+.X {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+#game-close-button:hover {
+    background-color: rgb(211, 21, 21);
+}
+
+#game-close-button:active {
+    background-color: rgb(130, 0, 0);
+}

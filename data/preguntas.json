@@ -1,0 +1,50 @@
+[
+    {
+        "question_id": 1,
+        "category": "Higiene",
+        "question_text": "¿Cuántas veces al día es recomendable cepillarse los dientes?",
+        "options": {
+            "a": "Una vez",
+            "b": "Dos veces",
+            "c": "Tres veces",
+            "d": "Cuatro veces"
+        },
+        "correct_answer": "c",
+        "comentarios": "Cepillarse los dientes tres veces al día es importante porque previene la acumulación de placa, que es una capa de bacterias que puede causar caries y enfermedades en las encías. Al cepillarse después de cada comida, se eliminan los restos de comida y bacterias antes de que dañen el esmalte dental y se reduzca el riesgo de caries y problemas en las encías, como la gingivitis. Además, esto ayuda a mantener un aliento fresco y refuerza el hábito de higiene bucal, lo cual es esencial para una salud dental a largo plazo.",
+        "fuentes": [
+            {
+                "title": "¿Cuándo y con qué frecuencia debes cepillarte los dientes?",
+                "author": "Mayo Clinic",
+                "date": "27/07/2023",
+                "url": "https://www.mayoclinic.org/es/healthy-lifestyle/adult-health/expert-answers/brushing-your-teeth/faq-20058193"
+            },
+            {
+                "title": "Salud bucodental",
+                "author": "OMS",
+                "date": "15/03/2022",
+                "url": "https://www.who.int/es/news-room/fact-sheets/detail/oral-health"
+            }
+        ]
+    },
+    {
+        "question_id": 2,
+        "category": "Higiene",
+        "question_text": "¿Por qué es importante lavarse las manos antes de comer?",
+        "options": {
+            "a": "Para quitar la grasa",
+            "b": "Para evitar contagios de bacterias",
+            "c": "Para que huelan bien",
+            "d": "Para secarlas correctamente"
+        },
+        "correct_answer": "b",
+        "comentarios": "Cepillarse los dientes tres veces al día es importante porque previene la acumulación de placa, que es una capa de bacterias que puede causar caries y enfermedades en las encías. Al cepillarse después de cada comida, se eliminan los restos de comida y bacterias antes de que dañen el esmalte dental y se reduzca el riesgo de caries y problemas en las encías, como la gingivitis. Además, esto ayuda a mantener un aliento fresco y refuerza el hábito de higiene bucal, lo cual es esencial para una salud dental a largo plazo.",
+        "fuentes": [
+            {
+                "title": "Lavado de manos: lo que se debe hacer y lo que no se debe hacer",
+                "author": "Mayo Clinic",
+                "date": "04/02/2022",
+                "url": "https://www.mayoclinic.org/es/healthy-lifestyle/adult-health/in-depth/hand-washing/art-20046253#:~:text=C%C3%B3mo%20lavarte%20las%20manos,-En%20general%2C%20lo&text=M%C3%B3jate%20las%20manos%20con%20agua,y%20debajo%20de%20las%20u%C3%B1as."
+            }
+        ]
+    }
+]
