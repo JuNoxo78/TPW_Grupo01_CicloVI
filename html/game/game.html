@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/game/game.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Pixelify+Sans:wght@400..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <style>
@@ -16,10 +22,49 @@
 <body id="body-game">
 
     <div id="game-container">
+        <img src="../../img/game/volumen_on.png" id="volumenOn">
+
         <button id="game-close-button">
             <span class="X"></span>
             <span class="Y"></span>
         </button>
+
+        <div id="bottom-advice">
+            <p>
+                ¿Eres nuevo en la plataforma BonaMedic? ¡Regístrate!<br>y canjea
+                los beneficios que ganarás en la trivia bonamedic
+            </p>
+
+            <div id="register-button">
+                <h3>
+                    REGISTRARSE
+                </h3>
+            </div>
+        </div>
+
+        <div id="game-content">
+            <div id="titlePlusAdvice">
+                <h1>
+                    <span style="color: #EDD629;">T</span><span style="color: #47E80D;">r</span><span
+                        style="color: #DB462C;">i</span><span style="color: #9B18CF;">v</span><span
+                        style="color: #DB462C;">i</span><span style="color: #5BCDBA;">a</span>
+
+                    <span style="color: #222DA3;">Bona</span><span style="color: #00C4B0;">Medic</span>
+                </h1>
+
+                <div id="title-advice">
+                    <img src="../../img/game/botiquin.png">
+                    <h3>
+                        ¡Juega, aprende, y ahorra en tu próxima atención!
+                    </h3>
+                </div>
+            </div>
+
+            <div id="menuButtons">
+                <button class="botonesOfMenu">Jugar</button>
+                <button class="botonesOfMenu">Salir</button>
+            </div>
+        </div>
     </div>
 
     <script src="../../js/game/game_script.js"></script>

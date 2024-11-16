@@ -1,3 +1,4 @@
+/* #region index.html stuff */
 #game-button {
     position: fixed;
     display: flex;
@@ -14,6 +15,7 @@
     border-radius: 60px;
     background: linear-gradient(to right, #121857, #222DA3);
     box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
+    cursor: pointer;
 
     i {
         font-size: 25px;
@@ -37,6 +39,9 @@
     }
 }
 
+/* #endregion */
+
+/* #region game.html general */
 #body-game {
     position: relative;
     display: flex;
@@ -52,20 +57,37 @@
     animation: bodyGameIn 0.4s forwards;
 }
 
+.body-game-out {
+    animation: bodyGameOut 0.4s forwards;
+}
+
 @keyframes bodyGameIn {
     from {
-        background-color: none;
+        background-color: rgba(0, 0, 0, 0);
     }
+
     to {
-        background-color: rgb(0, 0, 0, 0.25);
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes bodyGameOut {
+    from {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0);
     }
 }
 
 #game-container {
+    font-family: "Pixelify Sans", sans-serif;
     position: relative;
     width: 100%;
     height: 100%;
     border: 2px solid #171F70;
+    overflow: hidden;
 
     border-radius: 20px;
     background-image: url(../../img/game/background.gif);
@@ -79,18 +101,36 @@
     animation: gameContainerIn 0.4s ease;
 }
 
+.game-container-out {
+    animation: gameContainerOut 0.4s ease;
+}
+
 @keyframes gameContainerIn {
     from {
         transform: translateX(100vw);
     }
+
     to {
         transform: translateX(0);
     }
 }
 
+@keyframes gameContainerOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+/* #endregion */
+
+/* #region game.html CloseButton */
 #game-close-button {
     outline: none;
-    position: relative;
+    position: absolute;
     top: 20px;
     left: calc(100% - 73.33px);
     width: 53.33px;
@@ -99,6 +139,7 @@
     background: rgb(211, 21, 21, 0.7);
     border-radius: 5px;
     transition: background 0.1s;
+    cursor: pointer;
 }
 
 .X {
@@ -130,3 +171,204 @@
 #game-close-button:active {
     background-color: rgb(130, 0, 0);
 }
+
+/* #endregion Close Button */
+
+/* #region game.html Game Content */
+#game-content {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    padding-top: 72.23px;
+    gap: 30px;
+}
+
+#titlePlusAdvice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    h1 {
+        user-select: none;
+        font-size: 96px;
+        font-weight: 400;
+        text-shadow: 5px 5px 0px rgb(0, 0, 0);
+        text-align: center;
+    }
+}
+
+#title-advice {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+
+    background-color: rgb(0, 196, 176, 0.3);
+    padding: 13px 18px;
+    border-radius: 5px;
+    border: 2.5px solid #009989;
+
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.25);
+
+    img {
+        width: 40px;
+        height: auto
+    }
+
+    ;
+
+    h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #121857;
+        text-shadow: 3px 3px 0px #00897B;
+    }
+}
+/* #endregion */
+
+/* #region Menu buttons */
+#menuButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.botonesOfMenu {
+    font-family: "Pixelify Sans", sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    padding: 10px 40px;
+    font-size: 30px;
+    background-color: #333;
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: .8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, .8, .26, .99);
+    width: 186.96px;
+    height: 69.89px;
+}
+
+.botonesOfMenu:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: .7s cubic-bezier(0, .8, .26, .99);
+    z-index: -1;
+    background-color: #333 !important;
+    box-shadow: 0 -6px rgb(0 0 0 / 50%) inset, 0 6px rgb(255 255 255 / 20%) inset, -6px 0 rgb(255 255 255 / 20%) inset, 6px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.botonesOfMenu:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: .7s cubic-bezier(0, .8, .26, .99);
+}
+
+.botonesOfMenu:hover:before {
+    box-shadow: 0 -6px rgb(0 0 0 / 50%) inset, 0 6px rgb(255 255 255 / 20%) inset, -6px 0 rgb(255 255 255 / 20%) inset, 6px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.botonesOfMenu:hover:after {
+    box-shadow: 0 6px 0 0 rgb(0 0 0 / 15%);
+}
+
+.botonesOfMenu:active {
+    transform: translateY(4px);
+}
+
+.botonesOfMenu:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+/* #endregion */
+
+/* #region Bottom Advice */
+#bottom-advice {
+    position: absolute;
+    top: calc(100% - 95px);
+    box-sizing: border-box;
+    margin: 0px 60px;
+    padding: 10px 180px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 3px solid #414141;
+    width: 1196px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    
+    p {
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 1.5px;
+    }
+}
+
+#register-button {
+    padding: 5px 7px 8.5px 10px;
+    border-radius: 10px;
+    background-color: #00A291;
+    box-shadow: inset -4px -4px 0px rgb(0, 0, 0, 0.5);
+    padding: 5px 10px 8.5px 7px;
+    cursor: pointer;
+
+    h3 {
+        user-select: none;
+        letter-spacing: 1.5px;
+        line-height: 36px;
+        font-weight: 700;
+        padding: 5px;
+        font-size: 30px;
+        background-color: #00766A;
+        color: white;
+        text-shadow: 3px 3px 0px black;
+    }
+}
+/* #endregion */
+
+/* #region Volumen Buttons */
+#volumenOn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 70px;
+
+    filter: drop-shadow(5px 5px 0px black);
+}
+/* #endregion */

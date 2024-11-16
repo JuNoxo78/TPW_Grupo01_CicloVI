@@ -6,11 +6,17 @@ const gameCloseButton = document.getElementById("game-close-button");
 
 function closeGame() {
     window.parent.postMessage("cerrarDialog", "*");
+    location.reload(); // Al cerrar, se reinicia, para actualizar efectos
 }
 
 gameCloseButton.addEventListener("click", () => {
+    bodyGame.classList.remove('body-game-in');
     bodyGame.classList.add("body-game-out");
-    closeGame();
+    gameContainer.classList.remove("game-container-in");
+    gameContainer.classList.add("game-container-out");
+    setTimeout(() => {
+        closeGame();
+    }, 400);
 });
 
 function toogleGame() {
@@ -18,6 +24,8 @@ function toogleGame() {
 }
 
 window.addEventListener("load", () => {
+    bodyGame.classList.remove("body-game-out");
     bodyGame.classList.add("body-game-in");
     gameContainer.classList.add("game-container-in");
+    gameContainer.classList.remove("game-container-out");
 });

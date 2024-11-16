@@ -1,3 +1,5 @@
+const gameIframe = document.getElementById("game-iframe");
+
 const gameDialog = document.getElementById("game-dialog");
 
 const gameButton = document.getElementById("game-button");
