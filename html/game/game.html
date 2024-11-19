@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/game/game.css">
+    <link rel="stylesheet" href="../../css/game/game1_start&menu.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
 <body id="body-game">
 
     <div id="game-container">
-        <img src="../../img/game/volumen_on.png" id="volumenOn">
+        <img src="../../img/game/volumen_on.png" class="volumenBackButtons" id="volumenButton">
 
         <button id="game-close-button">
             <span class="X"></span>
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div id="game-content">
+        <div id="game-menu">
             <div id="titlePlusAdvice">
                 <h1>
                     <span style="color: #EDD629;">T</span><span style="color: #47E80D;">r</span><span
@@ -61,13 +61,14 @@
             </div>
 
             <div id="menuButtons">
-                <button class="botonesOfMenu">Jugar</button>
-                <button class="botonesOfMenu">Salir</button>
+                <button class="botonesOfMenu" id="play-button">Jugar</button>
+                <button class="botonesOfMenu" id="in-game-close-button">Salir</button>
             </div>
         </div>
     </div>
 
-    <script src="../../js/game/game_script.js"></script>
+    <script src="../../js/game/script1_start&menu.js"></script>
+    <script src="../../js/game/script2_instructions.js"></script>
 </body>
 
 </html>

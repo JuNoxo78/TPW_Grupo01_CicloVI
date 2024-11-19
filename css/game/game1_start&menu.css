@@ -175,7 +175,7 @@
 /* #endregion Close Button */
 
 /* #region game.html Game Content */
-#game-content {
+#game-menu {
     width: 100%;
     height: 100%;
 
@@ -333,7 +333,7 @@
     p {
         color: white;
         text-align: center;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 500;
         line-height: 17px;
         letter-spacing: 1.5px;
@@ -362,13 +362,26 @@
 }
 /* #endregion */
 
-/* #region Volumen Buttons */
-#volumenOn {
+/* #region Volumen-Back Buttons */
+.volumenBackButtons {
     position: absolute;
+    cursor: pointer;
+}
+
+#volumenButton {
     top: 20px;
     left: 20px;
     width: 70px;
-
+    height: 50px;
     filter: drop-shadow(5px 5px 0px black);
+}
+
+#backButton {
+    top: 18px;
+    left: 125.37px;
+    width: 39.94px;
+    height: 55px;
+    transform: scaleX(-1);
+    filter: drop-shadow(-5px 0px 0px black);
 }
 /* #endregion */

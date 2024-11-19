@@ -1,42 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="css/Style_Login.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Inicio de sesión</title>
+
+    <!--#region Fonts-->
+
+    <!---Montserrat--->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!---Maven Pro--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+
+    <!---AwesomeFonts--->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+
+    <!--#endregion-->
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/general.css">
     <link rel="stylesheet" href="../../css/app/login.css">
+
 </head>
+
 <body>
-    <header class="Cabecera-login">
-    </header>
-    <div class="Container-login">
-        <form action="">
-            <h1>Iniciar Sesion</h1>
-            <div class="Item-input">
-                <label>Correo Electronico</label>
-                <input placeholder="Ingresa tu correo electronico" type="email" required>
-                <i class='bx bxl-gmail'></i>
+    <div id="comercial-image">
+        <div class="logo">
+            <img src="../../img/icon_1.png" alt="Logo de la empresa" width="51px">
+            <p>Bona<span>medic</span></p>
+        </div>
+
+
+        <div id="comercialContent">
+            <img src="../../img/app/platformReference.png" width="540px">
+
+            <div id="comercialText">
+                <h1>Gestiona tu salud en un solo lugar</h1>
+
+                <p>Agenda una cita, revisa tratamientos, mantén contacto con tu especialista de confianza, y mucho más.
+                </p>
             </div>
-            <div class="Item-input">
-                <label>Contraseña</label>
-                <input placeholder="Ingresa tu Contraseña" type="password" required> 
-            </div>
-            <div class="Input-recordar">
-                <label><input type="checkbox" name="Recordar">Recordar</label>
-                <a href="#">Olvide mi Contraseña</a>
-            </div>
-            <div>
-                <input type="submit" class="Btn" value="Ingresar">
-            </div>
-            <div class="Registrate">
-                <p>¿No tienes cuenta?<a href="#"> Registrate</a</p>
-            </div>
-        </form>
+        </div>
     </div>
+
+    <iframe src="registro.html" frameborder="0" id="register-iframe"></iframe>
+
+    <div id="login-container">
+        <div id="bannerForm">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <p>Regístrate y descubre todas los beneficios de nuestra plataforma Bonamedic.</p>
+        </div>
+
+        <div id="form">
+            <h2>Inicia Sesión</h2>
+            <form id="contentForm" autocomplete="off" novalidate>
+                <div id="inputs">
+                    <div id="email-container">
+                        <label for="emailInput">Correo Electrónico</label>
+                        <input placeholder="Ingresa tu correo electrónico" type="email" required id="emailInput">
+                        <p id="mensaje-error-email"></p>
+                    </div>
+
+                    <div id="password-container">
+                        <label for="passwordInput">Contraseña</label>
+                        <div id="input-password-container">
+                            <input placeholder="Ingrese su contraseña" type="password" id="passwordInput" required>
+                            <i id="alter-password" class="fa-regular fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="rememberF">
+                    <div id="remember">
+                        <input type="checkbox" id="ui-checkbox">
+                        <label for="ui-checkbox">Recordar</label>
+                    </div>
+
+                    <a href="#">Olvidé mi contraseña</a>
+                </div>
+
+                <button type="submit" id="login-button" disabled>Ingresar</button>
+            </form>
+
+            <div id="register-container">
+                <p>¿No tienes cuenta?</p>
+                <span id="registro-link">Regístrate</span>
+            </div>
+        </div>
+
+        <div id="login-footer">
+            <div id="contact">
+                <a href="https://tr.ee/iLBAkzvFzN" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>Contáctanos +51 943 082 143</p>
+                </a>
+            </div>
+            <div id="about">
+                <a href="../../index.html">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <p>Conoce más de Bonamedic</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="advice-register-dialog">
+        <div id="advice-register-container">
+            <div id="image-plus-advice">
+                <img src="../../img/app/sadFace.png">
+                <p>No terminaste de crear tu cuenta. ¿Deseas continuar y crearla?</p>
+            </div>
+            <div id="options-of-advice">
+                <div id="out-button">
+                    No, salir
+                </div>
+                <div id="stay-button">
+                    Sí, continuar
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="../../js/app/script_login.js"></script>
 </body>
+
 </html>
