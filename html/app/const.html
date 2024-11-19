@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../css/app/diseño.css">
+    <script>
+        function actualizarFormulario() {
+            const rol = document.getElementById('rol').value;
+            const especialidad = document.getElementById('especialidad');
+            if (rol === "Medico") {
+                especialidad.disabled = false;  // Habilita el campo de especialidad
+                especialidad.value = "";  // Reinicia la selección si es Médico
+            } else if (rol === "Enfermero") {
+                especialidad.disabled = false;  // Desactiva el campo si es Enfermero
+                especialidad.value = "";  // Asigna "Nada" automáticamente
+            } else {
+                especialidad.disabled = true;  // Desactiva el campo si no se selecciona ningún rol
+                especialidad.value = "";  // Deja el campo vacío si no se selecciona ningún rol
+            }
+        }
+
+        function convertirAMayusculas(campo) {
+            campo.value = campo.value.toUpperCase();
+        }
+        function validarDNI(campo) {
+             if (campo.value.length > 8) {
+                 campo.value = campo.value.slice(0, 8); }
+             }
+        function guardarDatos(event) {
+            event.preventDefault();
+
+            const rol = document.getElementById('rol').value;
+            const nombre = document.querySelector('input[name="Nombre"]').value;
+            const apellido = document.querySelector('input[name="Apellido"]').value;
+            const dni = document.querySelector('input[name="DNI"]').value;
+            let especialidad = document.getElementById('especialidad').value;
+
+            // Si es enfermero, asegúrate de que la especialidad sea "Nada"
+            if (rol === "Enfermero" && especialidad === "") {
+                especialidad = "Nada";
+            }
+
+            const numColegiatura = document.querySelector('input[name="NumColegiatura"]').value;
+            const cuarto = document.querySelector('input[name="Cuarto"]').value;
+            const horario = [];
+
+            // Recolectar horarios
+            document.querySelectorAll('.dia').forEach(dia => {
+                const nombreDia = dia.querySelector('.nombre-dia').textContent;
+                const turno1Inicio = dia.querySelector('.turno1-inicio').value;
+                const turno1Fin = dia.querySelector('.turno1-fin').value;
+                const turno2Inicio = dia.querySelector('.turno2-inicio').value;
+                const turno2Fin = dia.querySelector('.turno2-fin').value;
+
+                if (turno1Inicio || turno1Fin || turno2Inicio || turno2Fin) {
+                    horario.push({
+                        dia: nombreDia,
+                        turno1: turno1Inicio && turno1Fin ? `${turno1Inicio} - ${turno1Fin}` : "Sin turno",
+                        turno2: turno2Inicio && turno2Fin ? `${turno2Inicio} - ${turno2Fin}` : "Sin turno"
+                    });
+                }
+            });
+
+            const empleado = {
+                rol,
+                nombre,
+                apellido,
+                dni,
+                especialidad,
+                numColegiatura,
+                cuarto,
+                horario,
+                fechaCreacion: new Date().toLocaleString()
+            };
+
+            let empleados = JSON.parse(localStorage.getItem('empleados')) || [];
+            empleados.push(empleado);
+            localStorage.setItem('empleados', JSON.stringify(empleados));
+
+            window.location.href = 'doctores.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>REGISTRO DEL PERSONAL DE SALUD</h1>
+    <form onsubmit="guardarDatos(event)">
+        <div class="cont">
+            <p> 
+                Rol: 
+                <select id="rol" name="Rol" onchange="actualizarFormulario()" required>
+                    <option value="">--Seleccione un rol--</option>
+                    <option value="Medico">Médico</option>
+                    <option value="Enfermero">Enfermero/a</option>
+                </select>
+            </p>
+            <p> Nombre: <input type="text" name="Nombre" oninput="convertirAMayusculas(this)" required /></p>
+            <p> Apellido: <input type="text" name="Apellido" oninput="convertirAMayusculas(this)" required /></p>
+            <p> DNI: <input type="number" name="DNI" oninput="validarDNI(this)" required /></p>
+            <p> Número de Colegiatura: <input type="text" name="NumColegiatura" oninput="convertirAMayusculas(this)" required /></p>
+            <p> Cuarto (asignado): <input type="text" name="Cuarto" oninput="convertirAMayusculas(this)" required /></p>
+            <p> 
+                Especialidad: 
+                <select id="especialidad" name="Especialidad" required>
+                    <option value="">Seleccione una especialidad</option>
+                    <option value="Nada">Nada</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Ginecología">Ginecología</option>
+                    <option value="Neurología">Neurología</option>
+                    <option value="Cirugía General">Cirugía General</option>
+                    <option value="Dermatología">Dermatología</option>
+                </select>
+            </p>
+        </div>
+
+        <!-- Sección de horarios -->
+        <h1>Agregar Horario</h1>
+        <div id="horario">
+            <div class="dia">
+                <span class="nombre-dia">Lunes</span>
+                <label>Turno 1:</label>
+                <input type="time" class="turno1-inicio"> a 
+                <input type="time" class="turno1-fin">
+                <label>Turno 2:</label>
+                <input type="time" class="turno2-inicio"> a 
+                <input type="time" class="turno2-fin">
+            </div>
+            <!-- Repetir para cada día de la semana -->
+            <div class="dia">
+                <span class="nombre-dia">Martes</span>
+                <label>Turno 1:</label>
+                <input type="time" class="turno1-inicio"> a 
+                <input type="time" class="turno1-fin">
+                <label>Turno 2:</label>
+                <input type="time" class="turno2-inicio"> a 
+                <input type="time" class="turno2-fin">
+            </div>
+            <div class="dia">
+                <span class="nombre-dia">Miércoles</span>
+                <label>Turno 1:</label>
+                <input type="time" class="turno1-inicio"> a 
+                <input type="time" class="turno1-fin">
+                <label>Turno 2:</label>
+                <input type="time" class="turno2-inicio"> a 
+                <input type="time" class="turno2-fin">
+            </div>
+            <div class="dia">
+                <span class="nombre-dia">Jueves</span>
+                <label>Turno 1:</label>
+                <input type="time" class="turno1-inicio"> a 
+                <input type="time" class="turno1-fin">
+                <label>Turno 2:</label>
+                <input type="time" class="turno2-inicio"> a 
+                <input type="time" class="turno2-fin">
+            </div>
+            <div class="dia">
+                <span class="nombre-dia">Viernes</span>
+                <label>Turno 1:</label>
+                <input type="time" class="turno1-inicio"> a 
+                <input type="time" class="turno1-fin">
+                <label>Turno 2:</label>
+                <input type="time" class="turno2-inicio"> a 
+                <input type="time" class="turno2-fin">
+            </div>
+            <div class="dia">
+                <span class="nombre-dia">Sábado</span>
+                <label>Turno 1:</label>
+                <input type="time" class="turno1-inicio"> a 
+                <input type="time" class="turno1-fin">
+                <label>Turno 2:</label>
+                <input type="time" class="turno2-inicio"> a 
+                <input type="time" class="turno2-fin">
+            </div>
+            <div class="dia">
+                <span class="nombre-dia">Domingo</span>
+                <label>Turno 1:</label>
+                <input type="time" class="turno1-inicio"> a 
+                <input type="time" class="turno1-fin">
+                <label>Turno 2:</label>
+                <input type="time" class="turno2-inicio"> a 
+                <input type="time" class="turno2-fin">
+            </div>
+        </div>
+
+        <button type="reset">Borrar Contenido</button>
+        <button type="submit">Registrar Personal</button>
+        <button type="button" onclick="window.location.href = 'doctores.html';">Volver</button>
+    </form>
+</body>
+</html>
