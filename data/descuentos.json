@@ -1,0 +1,11 @@
+[
+    {
+        "usuario_id": "001",
+        "UsuarioNombre": "Juan Andre López Córdova",
+        "descuentos": {
+            "fechaObtenido": "04/11/2024",
+            "descuento": "17%",
+            "vecido": false
+        }
+    }
+]

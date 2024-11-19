@@ -1,0 +1,75 @@
+{
+    "juego": {
+        "modosJuego": [
+            {
+                "modo": "Fácil",
+                "cantidadPreguntas": 10,
+                "premio": {
+                    "descuento": 5,
+                    "descripción": "5% de descuento en citas médicas y terapeúticas."
+                }
+            },
+            {
+                "modo": "Medio",
+                "cantidadPreguntas": 20,
+                "premio": {
+                    "descuento": 15,
+                    "descripción": "15% de descuento en cualquier servicio Bonamedic."
+                }
+            },
+            {
+                "modo": "Difícil",
+                "cantidadPreguntas": 40,
+                "premio": {
+                    "descuento": 40,
+                    "descripción": "40% de descuento en cualquier servicio bonamedic."
+                }
+            }
+        ],
+        "nivelesJugador": [
+            {
+                "nivel_id": 1,
+                "nombre": "Aprendiz de Bienestar",
+                "puntosExpMinimo": 0,
+                "descuentoAdicional": "0%",
+                "descripción": "¡Empiezas tu camino! Conoces lo básico y estás listo para aprender a vivir de manera más saludable."
+            },
+            {
+                "nivel_id": 2,
+                "nombre": "Explorador de Bienestar",
+                "puntosExpMinimo": 500,
+                "descuentoAdicional": "2%",
+                "descripcion": " ¡Vas por buen camino! Cada vez sumas más hábitos saludables y estás lleno de curiosidad para mejorar."
+            },
+            {
+                "nivel_id": 3,
+                "nombre": "Vigilante de la Salud",
+                "puntosExpMinimo": 1500,
+                "descuentoAdicional": "4%",
+                "descripcion": "¡Ya eres un defensor activo de tu bienestar! Sabes qué es bueno para ti y vigilas cada aspecto de tu salud."
+            },
+            {
+                "nivel_id": 4,
+                "nombre": "Experto en Vitalidad",
+                "puntosExpMinimo": 2500,
+                "descuentoAdicional": "6%",
+                "descripcion": "¡Tu vitalidad es contagiosa! Tienes un conocimiento sólido y aplicas cada día tu experiencia en salud."
+            },
+            {
+                "nivel_id": 5,
+                "nombre": "Defensor de la Vida",
+                "puntosExpMinimo": 4000,
+                "descuentoAdicional": "8%",
+                "descripcion": "¡Inspiras a otros! Te preocupas no solo por tu salud, sino también por la de quienes te rodean. ¡Eres un verdadero modelo a seguir!"
+            },
+            {
+                "nivel_id": 6,
+                "nombre": "Maestro de la Salud Integral",
+                "puntosExpMinimo": 6000,
+                "descuentoAdicional": "0%",
+                "descuentoBase": "15%",
+                "descripcion": "¡Estás en la cima! Conoces todos los secretos del bienestar y eres un guía para otros en su viaje hacia una vida saludable."
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+[
+    {
+        "usuario_id": "001",
+        "usuario_nivel_id": 2,
+        "UsuarioNombre": "Juan Andre López Córdova",
+        "intentos": [
+            {
+                "modo": "Medio",
+                "ticketsUsados": 20,
+                "obtencionDescuento": true,
+                "fecha": "04/11/2024"
+            }
+        ]
+    }
+]

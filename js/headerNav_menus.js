@@ -6,12 +6,6 @@ const navNosotros = document.getElementById("headerNav-nosotros");
 const menuNosotros = document.getElementById("headerMenu-nosotros");
 // #endregion
 
-// #region menus opening
-navNosotros.addEventListener("click", () => {
-    openMenuNosotros();
-});
-// #endregion
-
 // #region open/close functions for menus
 
 //// MenuNosotros
@@ -26,6 +20,10 @@ function closeMenuNosotros() {
 }
 ////
 
+// #endregion
+
+// #region menus opening
+navNosotros.addEventListener("click", openMenuNosotros);
 // #endregion
 
 // #region work with linnks

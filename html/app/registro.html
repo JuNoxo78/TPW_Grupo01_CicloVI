@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bonamedic</title>
+
+    <!--#region Fonts-->
+
+    <!---Montserrat--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!---Maven Pro--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+
+    <!---AwesomeFonts--->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+
+    <!--#endregion-->
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/app/registro1.css">
+    <link rel="stylesheet" href="../../css/app/registro2.css">
+</head>
+
+<body>
+    <div id="registerHeader1" class="registerHeader">
+        <div id="volverOp1" class="volverOp">
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>Volver</p>
+        </div>
+    </div>
+
+    <div id="register-form-1">
+        <img src="../../img/app/4pc_1.png">
+
+        <div id="register-form-content">
+            <form novalidate>
+                <h1>Ingresa tu documento</h1>
+
+                <div id="general-content-form">
+                    <div id="form-documento">
+                        <div id="form-general-doc">
+                            <div id="tipo-documento">
+                                <label>Tipo de documento</label>
+                                <div id="input-doc-container">
+                                    <select id="select-input">
+                                        <option>DNI</option>
+                                        <option>CE</option>
+                                        <option>PAS</option>
+                                    </select>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                            </div>
+
+                            <div id="document-number-container">
+                                <label for="numberDocInput">N° de documento</label>
+                                <div id="input-number-doc-container">
+                                    <input placeholder="Ej: 11122233" type="number" id="numberDocInput" required>
+                                </div>
+                                <p id="error-message-number-doc-input"></p>
+                            </div>
+                        </div>
+
+                        <div id="fecha-nacimiento-container">
+                            <label for="fechaNacInput">Fecha de nacimiento</label>
+                            <div id="input-fecha-nac-container">
+                                <input type="date" id="fechaNacInput" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="terminos-beneficios-check">
+                        <div class="advices-container">
+                            <input type="checkbox" id="terminos-checkbox" class="ui-checkbox">
+                            <label>
+                                Acepto los
+                                <span>
+                                    Términos y Condiciones y la Política de Privacidad
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="advices-container">
+                            <input type="checkbox" id="beneficios-checkbox" class="ui-checkbox">
+                            <label>
+                                Acepto recibir
+                                <span>
+                                    beneficios, ofertas, publicidad y novedades de BonaMedic
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="button" id="continue-button" disabled>Continuar</button>
+
+                    <div id="login-question-container">
+                        <p>¿Ya tienes cuenta?</p>
+                        <span id="login-link">Iniciar sesion</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerHeader2" class="registerHeader">
+        <div id="volverOp2" class="volverOp">
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>Volver</p>
+        </div>
+    </div>
+
+    <div id="register-form-2">
+        <img src="../../img/app/4pc_2.png">
+
+        <div id="register-form-content-1">
+            <h1>Verifica tus datos personales</h1>
+
+            <div id="info-register-user">
+                <div id="dni-info">
+                    <h3>DNI</h3>
+                    <p>72134465</p>
+                </div>
+                <div id="nombres-apellidos-info">
+                    <h3>Nombres y apellidos</h3>
+                    <p>Juan Andre López Córdova</p>
+                </div>
+                <div id="fecha-nacimiento-info">
+                    <h3>Fecha de Nacimiento</h3>
+                    <p>30/03/2005</p>
+                </div>
+            </div>
+
+            <form novalidate>
+                <div id="sexo-registro">
+                    <label>Sexo</label>
+                    <div id="input-sexo">
+                        <select id="select-input">
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                        </select>
+                        <i class="fa-solid fa-sort-down"></i>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <script src="../../js/app/script_register_1.js"></script>
+        <script src="../../js/app/script_register_2.js"></script>
+</body>
+
+</html>

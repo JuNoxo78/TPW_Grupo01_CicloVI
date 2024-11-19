@@ -1,0 +1,243 @@
+/* #region Footer Title */
+#footerTitle {
+    padding: 0 80px;
+}
+
+#logoFooterTitle {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 2px;
+    border-bottom: rgb(0, 0, 0, 0.1) solid 1px;
+}
+
+#logoFooterTitle p {
+    color: #222DA3;
+    font-size: 17.03px;
+    font-weight: 500;
+
+    span {
+        color: #00C4B0;
+        font-weight: 700;
+    }
+}
+
+/* #endregion */
+
+/* #region Footer Navigation */
+
+/* #region CommonAtributes */
+#footerNav {
+    padding: 30px 95px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.navElementF {
+    gap: 18px;
+}
+
+.navSubSections {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.navGroupItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.navFooterItems {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+
+    i {
+        font-size: 13px;
+        width: 15px;
+        text-align: center;
+        color: #01695F;
+    }
+}
+
+.navElementF h2 {
+    color: #01695F;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.navElementF h3 {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 470;
+    color: #464646;
+    line-height: 140%;
+}
+
+.navElementF p {
+    font-size: 13.5px;
+    color: #464646;
+    line-height: 140%;
+}
+
+.navElementF a {
+    text-decoration: none;
+    font-size: 13.5px;
+    color: #464646;
+    line-height: 140%;
+}
+
+/* #endregion */
+
+/* #region OficinasElement */
+#oficinasElement {
+    width: 306px;
+    display: flex;
+    flex-direction: column;
+}
+
+#oficinasElement>div {
+    gap: 24px;
+}
+
+/* #endregion */
+
+/* #region ContactoElement */
+#contactoElement {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactoElement>div {
+    gap: 24px;
+}
+
+/* #endregion */
+
+/* #region SeccionesElement */
+#seccionesElement {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* #endregion */
+
+/* #region NosotrosElement */
+#nosotrosElement {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* #endregion */
+
+/* #endregion*/
+
+/* #region Footer Middle */
+#footerMid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 80px;
+    border-top: rgb(0, 0, 0, 0.1) solid 1px;
+}
+
+#redesSociales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    p {
+        font-size: 17.03px;
+        font-weight: 600;
+        color: #01695F;
+    }
+}
+
+#rrssIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#rrssIcons i {
+    transition: all 0.1s linear;
+    font-size: 24px;
+    color: #464646;
+}
+
+#rrssIcons a:hover i {
+    transform: scale(1.1);
+    color: rgb(29, 29, 29);
+}
+
+#rrssIcons a:active i {
+    color: #01695F;
+}
+
+#libroReclamaciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        font-size: 24px;
+        text-decoration: none;
+        color: #464646;
+        transition: all 0.1s linear;
+    }
+
+    a {
+        font-size: 17.03px;
+        font-weight: 600;
+        white-space: nowrap;
+        color: #464646;
+        transition: all 0.1s linear;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+#libroReclamaciones:hover {
+    i {
+        color: rgb(29, 29, 29);
+    }
+
+    a {
+        color: rgb(29, 29, 29);
+    }
+}
+
+/* #endregion */
+
+/* #region Footer Bottom*/
+#footerBottom {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #171F70;
+
+    p {
+        color: white;
+        font-size: 17.03px;
+        font-weight: 600;
+    }
+}
+
+/* #endregion */
