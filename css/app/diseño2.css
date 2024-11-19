@@ -1,0 +1,79 @@
+html {
+    background-image: url("../../img/app/DOCTORES.jpg"); /* Establece la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra toda la ventana */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: #007BFF; /* Color de fondo complementario */
+}
+
+h1 {
+    font-weight: bold;
+    font-weight: 1000; /* Hace el texto más grueso */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #007BFF; /* Establece el color del texto */
+    text-shadow: 
+        5px -1px 0 #ffffff,  /* Sombra de texto blanca desplazada */
+         5px -1px 0 #000000, /* Sombra de texto negra desplazada */
+        5px  1px 0 #ffffff,
+         5px  1px 0 #ffffff;
+    font-family: 'Montserrat', sans-serif; /* Establece la fuente del texto */
+    font-size: 20pt; /* Tamaño de la fuente */
+}
+
+form {
+    text-align: center; /* Centra el contenido del formulario */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    padding: 20px; /* Añade espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra para el formulario */
+    margin: 20px auto; /* Centra el formulario horizontalmente */
+    max-width: 600px; /* Ancho máximo del formulario */
+}
+
+div {
+    align-items: center;
+    border-radius: 0%;
+    font-weight: bold;
+    font-weight: 50pt; /* Hace el texto más grueso */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: rgb(0, 0, 0); /* Establece el color del texto */
+    font-family: 'Montserrat', sans-serif; /* Establece la fuente del texto */
+    font-size: 13pt; /* Tamaño de la fuente */
+    text-shadow: 
+     -1px  -1px 0 #ffffff,  /* Sombra de texto blanca desplazada */
+     -1px  -1px 0 #ffffff,
+     -1px  -1px 0 #ffffff,
+     -1px  -1px 0 #ffffff;
+}
+
+.dias-trabajo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.dia-trabajo {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para los contenedores */
+    width: 200px; /* Ancho fijo para los contenedores */
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+    padding: 10px 20px; /* Espacio interno del botón */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+    color: rgb(255, 255, 255); /* Color del texto del botón */
+    background-color: #007BFF; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: 1000; /* Hace el texto del botón más grueso */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+}
