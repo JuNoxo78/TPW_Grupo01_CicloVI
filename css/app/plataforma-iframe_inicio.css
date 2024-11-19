@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+.container-image{
+    width: 1056px;
+    height: 140px;
+    background-color: #00A29126;
+    border-radius: 16px;
+    padding-left: 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+     overflow: hidden;
+}
+
+.container-image img{
+    width: 396px;
+    height: 264px;
+}
+
+.container-slogan h1{
+    color: #171F70;
+    font-weight: 500;
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+.container-slogan p{
+    color: #04786C;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    padding-left: 30px;
+}
+
+.container-button{
+    width: 236px;
+    height: 401px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-button img {
+    width: 150px;
+    height: 150px;
+
+}
+
+.container-button h2{
+    color: #252525;
+    font-size: 21px;
+    font-weight: 500;
+    font-family:  "Montserrat", sans-serif;
+    margin-top: 10px;
+}
+
+.container-button p{
+    color: #484848;
+    font-size: 15px;
+    font-weight: 400;
+    font-family:  "Montserrat", sans-serif;
+    margin-top: 10px;
+}
+
+.container-button input{
+    width: 178px;
+    height: 43px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: #0077D5;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 400;
+    font-family:  "Montserrat", sans-serif;
+    margin-top: 15px;
+}
+
+.container-button input:hover{
+    cursor: pointer;
+}

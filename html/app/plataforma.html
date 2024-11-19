@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda tu cita</title>
+     <!---Montserrat--->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet">
+ 
+     <link href="/css/general.css" rel="stylesheet">
+     <link href="/css/app/plataforma.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+<body>
+    <header class="container-header">
+        <div class="container-icon">
+            <a href="#" > 
+                <img src="/img/icon_1.png" alt="icono de bonamedic">
+                <p>Bona<span>medic</span></p>
+            </a>
+        </div>
+        <div class="container-user">
+            <i class="fa-regular fa-user"></i>
+            <h2>Juan Lopez</h2>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+    <div class="container-main">
+        <div class="barra-propiedades">
+            <nav>
+                <a href="/html/app/plataforma-iframe_inicio.html" id="inicio" target="frames"><i class="fa-solid fa-house"></i> Inicio </a>
+                <a href="/html/app/plataforma-iframe_Ncita.html" id="nueva-cita" target="frames"><i class="fa-solid fa-circle-plus"></i> Nueva cita</a>
+                <a href="/html/app/plataforma-iframe_Mcitas.html" id="mis-citas" target="frames"> <i class="fa-solid fa-calendar-days"></i> Mis citas</a>
+            </nav>
+            <div class="contactanos">
+                <p id="contactanos-p">¿Tienes alguna duda o inconveniente? Contáctanos a:</p>
+                <p>bonamedicperu@gmail.com</p>
+                <p>Whatsapp BonaMedic</p>
+            </div>
+        </div>
+        <div class="contenedor-iframe">
+            <iframe src="/html/app/plataforma-iframe_inicio.html" frameborder="0" name="frames"></iframe>
+        </div>
+    </div>
+</body>
+</html>

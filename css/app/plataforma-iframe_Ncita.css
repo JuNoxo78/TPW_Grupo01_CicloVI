@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-slogan{
+    height: 150px;
+    background-color: #00A2911A;
+    padding: 45px 50px;
+}
+
+.container-slogan h1{
+    font-size: 35px;
+    font-weight: 500;
+    color:#171F70;
+}
+
+.container-slogan p{
+    font-size: 15px;
+    font-weight: 400; 
+    color: #04786C;
+}
+
+.container-especialidades{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.container-especialidades div{
+    width: 215px;
+    height: 130px;
+    border: 1.06px solid #0000001A;
+    border-radius: 16.93px;
+    margin: 80px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s box-shadow ease-in-out;
+}
+
+.container-especialidades div:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.container-logo .fa-solid{
+    color:#04786C;
+}
