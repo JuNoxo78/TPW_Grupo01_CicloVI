@@ -1,19 +1,49 @@
 const volverOp1 = document.getElementById("volverOp1");
-const loginLink = document.getElementById("login-link");
+const loginLink = document.querySelectorAll(".login-link");
 
 volverOp1.addEventListener("click", () => {
     window.parent.postMessage("Volver al login", "*");
 });
 
-loginLink.addEventListener("click", () => {
-    window.parent.postMessage("Abrir advice register", "*");
+loginLink.forEach((link) => {
+    link.addEventListener("click", () => {
+        window.parent.postMessage("Abrir advice register", "*");
+    });
+});
+
+const forms = document.querySelectorAll("form");
+
+const continueButtons = document.querySelectorAll(".continue-button");
+
+window.addEventListener("message", (event) => {
+    switch (event.data) {
+        case "Actualiza registro, despues de volver al login":
+            forms.forEach(form => {
+                form.reset();
+            });
+
+            continueButtons.forEach(continueButton => {
+                continueButton.disabled = true;
+                continueButton.classList.remove('enabled');
+            });
+
+            registerHeader1.style.display = "flex"
+            registerForm1.style.display = "flex"
+            registerHeader2.style.display = "none"
+            registerForm2.style.display = "none"
+            registerHeader3.style.display = "none"
+            registerForm3.style.display = "none"
+            break;
+        default:
+            break;
+    }
 });
 
 const numberDocInput = document.getElementById("numberDocInput");
 const erroMessageNumberDocInput = document.getElementById("error-message-number-doc-input");
 const selectInput = document.getElementById("select-input");
 const fechaNacInput = document.getElementById("fechaNacInput");
-const continueButton = document.getElementById("continue-button");
+const continueButton0 = document.getElementById("continue-button-0");
 const terminosCheckbox = document.getElementById("terminos-checkbox");
 
 function verificarCamposRegisterOne() {
@@ -66,11 +96,11 @@ function verificarCamposRegisterOne() {
     }
 
     if (fechaNacInput.value && numberDocInput.value && goodDocNumber && terminosCheckbox.checked) {
-        continueButton.disabled = false;
-        continueButton.classList.add('enabled');
+        continueButton0.disabled = false;
+        continueButton0.classList.add('enabled');
     } else {
-        continueButton.disabled = true;
-        continueButton.classList.remove('enabled');
+        continueButton0.disabled = true;
+        continueButton0.classList.remove('enabled');
     }
 }
 
@@ -82,8 +112,8 @@ selectInput.addEventListener("change", () => {
     numberDocInput.value = "";
     erroMessageNumberDocInput.style.display = "none"
     numberDocInput.style.boxShadow = "0 0 0 0.2px black"
-    continueButton.disabled = true;
-    continueButton.classList.remove('enabled');
+    continueButton0.disabled = true;
+    continueButton0.classList.remove('enabled');
 })
 
 fechaNacInput.addEventListener("change", verificarCamposRegisterOne);
@@ -95,7 +125,7 @@ const registerForm2 = document.getElementById("register-form-2");
 const registerHeader1 = document.getElementById("registerHeader1")
 const registerHeader2 = document.getElementById("registerHeader2");
 
-continueButton.addEventListener("click", () => {
+continueButton0.addEventListener("click", () => {
     registerForm1.style.display = "none"
     registerForm2.style.display = "flex"
     registerHeader1.style.display = "none"

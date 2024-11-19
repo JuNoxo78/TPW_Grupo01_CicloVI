@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../../css/general.css">
     <link rel="stylesheet" href="../../css/app/registro1.css">
     <link rel="stylesheet" href="../../css/app/registro2.css">
+    <link rel="stylesheet" href="../../css/app/registro3.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
         <img src="../../img/app/4pc_1.png">
 
         <div id="register-form-content">
-            <form novalidate>
+            <form novalidate id="form-1" autocomplete="off">
                 <h1>Ingresa tu documento</h1>
 
                 <div id="general-content-form">
@@ -99,11 +100,11 @@
                         </div>
                     </div>
 
-                    <button type="button" id="continue-button" disabled>Continuar</button>
+                    <button type="button" id="continue-button-0" class="continue-button" disabled>Continuar</button>
 
-                    <div id="login-question-container">
+                    <div class="login-question-container">
                         <p>¿Ya tienes cuenta?</p>
-                        <span id="login-link">Iniciar sesion</span>
+                        <span class="login-link">Iniciar sesion</span>
                     </div>
                 </div>
             </form>
@@ -123,38 +124,180 @@
         <div id="register-form-content-1">
             <h1>Verifica tus datos personales</h1>
 
-            <div id="info-register-user">
-                <div id="dni-info">
-                    <h3>DNI</h3>
-                    <p>72134465</p>
-                </div>
-                <div id="nombres-apellidos-info">
-                    <h3>Nombres y apellidos</h3>
-                    <p>Juan Andre López Córdova</p>
-                </div>
-                <div id="fecha-nacimiento-info">
-                    <h3>Fecha de Nacimiento</h3>
-                    <p>30/03/2005</p>
-                </div>
-            </div>
-
             <form novalidate>
+                <div id="info-register-user">
+                    <div id="dni-info">
+                        <h3>DNI</h3>
+                        <p>72134465</p>
+                    </div>
+                    <div id="nombres-apellidos-info">
+                        <h3>Nombres y apellidos</h3>
+                        <p>Juan Andre López Córdova</p>
+                    </div>
+                    <div id="fecha-nacimiento-info">
+                        <h3>Fecha de Nacimiento</h3>
+                        <p>30/03/2005</p>
+                    </div>
+                </div>
+
                 <div id="sexo-registro">
                     <label>Sexo</label>
                     <div id="input-sexo">
-                        <select id="select-input">
-                            <option>Femenino</option>
-                            <option>Masculino</option>
+                        <select id="select-sex-input">
+                            <option value="" disabled selected hidden>Seleccione una opción</option>
+                            <option class="true-sex-options">Femenino</option>
+                            <option class="true-sex-options">Masculino</option>
                         </select>
                         <i class="fa-solid fa-sort-down"></i>
                     </div>
+                </div>
 
+                <button type="button" id="continue-button-1" class="continue-button" disabled>Continuar</button>
+
+                <div class="login-question-container">
+                    <p>¿Ya tienes cuenta?</p>
+                    <span class="login-link">Iniciar sesion</span>
                 </div>
             </form>
         </div>
+    </div>
 
-        <script src="../../js/app/script_register_1.js"></script>
-        <script src="../../js/app/script_register_2.js"></script>
+    <div id="registerHeader3" class="registerHeader">
+        <div id="volverOp3" class="volverOp">
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>Volver</p>
+        </div>
+    </div>
+
+    <div id="register-form-3">
+        <img src="../../img/app/4pc_3.png">
+
+        <div id="register-form-content-3">
+            <h1>Contacto y contraseña</h1>
+
+            <form novalidate autocomplete="off">
+                <div id="email-register-container">
+                    <label for="email-register-input">Correo Electrónico</label>
+                    <div id="email-register-input-container">
+                        <input placeholder="Ej: correo@mail.com" type="email" id="email-register-input" required>
+                    </div>
+                    <p id="error-message-email-register-input"></p>
+                </div>
+
+                <div id="country-code-number-container">
+                    <div id="country-code-number">
+                        <label>Código del país</label>
+                        <div id="country-code-input-container">
+                            <select id="country-code-select-input">
+                                <!-- #region phone codes -->
+                                <option value="+54">Argentina (+54)</option>
+                                <option value="+591">Bolivia (+591)</option>
+                                <option value="+55">Brasil (+55)</option>
+                                <option value="+56">Chile (+56)</option>
+                                <option value="+57">Colombia (+57)</option>
+                                <option value="+506">Costa Rica (+506)</option>
+                                <option value="+53">Cuba (+53)</option>
+                                <option value="+593">Ecuador (+593)</option>
+                                <option value="+503">El Salvador (+503)</option>
+                                <option value="+502">Guatemala (+502)</option>
+                                <option value="+592">Guayana (+592)</option>
+                                <option value="+509">Haití (+509)</option>
+                                <option value="+504">Honduras (+504)</option>
+                                <option value="+52">México (+52)</option>
+                                <option value="+505">Nicaragua (+505)</option>
+                                <option value="+507">Panamá (+507)</option>
+                                <option value="+595">Paraguay (+595)</option>
+                                <option value="+51" selected>Perú (+51)</option>
+                                <option value="+1">República Dominicana (+1)</option>
+                                <option value="+598">Uruguay (+598)</option>
+                                <option value="+58">Venezuela (+58)</option>
+                                <!-- #endregion -->
+                            </select>
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div>
+
+                    <div id="phone-number-container">
+                        <label for="phone-numer-input">Número de celular</label>
+                        <div id="phone-number-input-container">
+                            <input placeholder="Ej: 123456789" type="number" id="phone-numer-input" required>
+                        </div>
+                        <p id="error-message-phone-number-input"></p>
+                    </div>
+                </div>
+
+                <div id="departamento-provincia-container">
+                    <div id="departamento-container" class="options-dep-prov">
+                        <label>Departamento</label>
+                        <div id="departamento-input-container">
+                            <select id="departamento-select-input">
+                                <option selected disabled hidden value="0">Ej: Áncash</option>
+                                <option >Lima</option>
+                            </select>
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div>
+
+                    <div id="provincia-container" class="options-dep-prov">
+                        <label>Provincia</label>
+                        <div id="provincia-input-container">
+                            <select id="provincia-select-input">
+                                <option selected disabled hidden>Ej: Santa</option>
+                            </select>
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="distrito-container" class="options-dep-prov">
+                    <label>Distrito</label>
+                    <div id="distrito-input-container">
+                        <select id="distrito-select-input">
+                            <option selected disabled hidden>Ej: Nuevo Chimbote</option>
+                        </select>
+                        <i class="fa-solid fa-sort-down"></i>
+                    </div>
+                </div>
+
+                <div id="password-register-container">
+                    <label for="password-register-input">Crea una contraseña</label>
+                    <div id="input-password-register-container">
+                        <input placeholder="Ingrese su contraseña" type="password" id="password-register-input"
+                            required>
+                        <i id="alter-password-1" class="fa-regular fa-eye"></i>
+                    </div>
+                </div>
+
+                <div id="password-register-advice">
+                    <p>
+                        Tu contraseña debe tener mínimo 8 caracteres, incluir al menos un número, una letra mayúscula y
+                        una letra minúscula.
+                    </p>
+                </div>
+
+                <div id="password-confirm-container">
+                    <label for="password-confirm-input">Confirmar tu contraseña</label>
+                    <div id="input-password-confirm-container">
+                        <input placeholder="Ingrese su contraseña" type="password" id="password-confirm-input" required>
+                        <i id="alter-password-2" class="fa-regular fa-eye"></i>
+                    </div>
+
+                </div>
+
+                <button type="button" id="continue-button-2" class="continue-button" disabled>Continuar</button>
+
+                <div class="login-question-container">
+                    <p>¿Ya tienes cuenta?</p>
+                    <span class="login-link">Iniciar sesion</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../js/app/script_register_1.js"></script>
+    <script src="../../js/app/script_register_2.js"></script>
+    <script src="../../js/app/script_register_3.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,5 @@
-#register-form-2, #registerHeader2 {
+#register-form-2,
+#registerHeader2 {
     display: none;
 }
 
@@ -19,6 +20,7 @@
 #register-form-content-1 {
     display: flex;
     flex-direction: column;
+    gap: 30px;
 
     h1 {
         font-size: 25px;
@@ -28,6 +30,76 @@
     form {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
     }
+}
+
+#info-register-user {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    h3 {
+        font-size: 14px;
+        color: #565656;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+}
+
+#sexo-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+        color: #565656;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #input-sexo {
+        position: relative;
+        display: inline-block;
+
+        select {
+            width: 100%;
+            outline: none;
+            border: none;
+            box-shadow: 0 0 0 0.2px black;
+            background: none;
+            height: 48px;
+            padding: 0px 15px 0px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: "Montserrat", sans-serif;
+            appearance: none;
+            color: #414141;
+            font-weight: 400;
+        }
+
+        i {
+            position: absolute;
+            right: 15px;
+            top: 45%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: rgb(0, 118, 106, 0.75);
+        }
+    }
+}
+
+.true-sex-options {
+    color: black;
 }

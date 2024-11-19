@@ -76,6 +76,7 @@ outButton.addEventListener("click", () => {
     registerIframe.style.display = "none";
     loginContainer.style.display = "flex";
     adviceRegisterDialog.close();
+    registerIframe.contentWindow.postMessage("Actualiza registro, despues de volver al login", "*");
 });
 
 stayButton.addEventListener("click", () => {

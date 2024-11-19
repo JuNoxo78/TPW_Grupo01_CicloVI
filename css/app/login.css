@@ -489,3 +489,24 @@ iframe {
         color: white;
     }
 }
+
+#administrator-button {
+    color: rgba(255, 0, 0, 0.89);
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+    justify-content: end;
+    
+    a {
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+}
