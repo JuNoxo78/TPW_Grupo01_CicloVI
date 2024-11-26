@@ -32,14 +32,14 @@
 </head>
 
 <body>
-    <div id="registerHeader1" class="registerHeader">
-        <div id="volverOp1" class="volverOp">
+    <div id="registerHeader">
+        <div id="volverOp">
             <i class="fa-solid fa-chevron-left"></i>
             <p>Volver</p>
         </div>
     </div>
 
-    <div id="register-form-1">
+    <div id="register-form-1" class="register-form">
         <img src="../../img/app/4pc_1.png">
 
         <div id="register-form-content">
@@ -111,14 +111,7 @@
         </div>
     </div>
 
-    <div id="registerHeader2" class="registerHeader">
-        <div id="volverOp2" class="volverOp">
-            <i class="fa-solid fa-chevron-left"></i>
-            <p>Volver</p>
-        </div>
-    </div>
-
-    <div id="register-form-2">
+    <div id="register-form-2" class="register-form">
         <img src="../../img/app/4pc_2.png">
 
         <div id="register-form-content-1">
@@ -144,7 +137,7 @@
                     <label>Sexo</label>
                     <div id="input-sexo">
                         <select id="select-sex-input">
-                            <option value="" disabled selected hidden>Seleccione una opción</option>
+                            <option disabled selected hidden>Seleccione una opción</option>
                             <option class="true-sex-options">Femenino</option>
                             <option class="true-sex-options">Masculino</option>
                         </select>
@@ -162,14 +155,7 @@
         </div>
     </div>
 
-    <div id="registerHeader3" class="registerHeader">
-        <div id="volverOp3" class="volverOp">
-            <i class="fa-solid fa-chevron-left"></i>
-            <p>Volver</p>
-        </div>
-    </div>
-
-    <div id="register-form-3">
+    <div id="register-form-3" class="register-form">
         <img src="../../img/app/4pc_3.png">
 
         <div id="register-form-content-3">
@@ -218,9 +204,9 @@
                     </div>
 
                     <div id="phone-number-container">
-                        <label for="phone-numer-input">Número de celular</label>
+                        <label for="phone-number-input">Número de celular</label>
                         <div id="phone-number-input-container">
-                            <input placeholder="Ej: 123456789" type="number" id="phone-numer-input" required>
+                            <input placeholder="Ej: 123456789" type="number" id="phone-number-input" required>
                         </div>
                         <p id="error-message-phone-number-input"></p>
                     </div>
@@ -231,8 +217,7 @@
                         <label>Departamento</label>
                         <div id="departamento-input-container">
                             <select id="departamento-select-input">
-                                <option selected disabled hidden value="0">Ej: Áncash</option>
-                                <option >Lima</option>
+                                <option selected disabled hidden value="0">Seleccione su departamento</option>
                             </select>
                             <i class="fa-solid fa-sort-down"></i>
                         </div>
@@ -241,8 +226,8 @@
                     <div id="provincia-container" class="options-dep-prov">
                         <label>Provincia</label>
                         <div id="provincia-input-container">
-                            <select id="provincia-select-input">
-                                <option selected disabled hidden>Ej: Santa</option>
+                            <select id="provincia-select-input" disabled>
+                                <option selected disabled hidden value="0">Seleccione su provincia</option>
                             </select>
                             <i class="fa-solid fa-sort-down"></i>
                         </div>
@@ -253,8 +238,8 @@
                 <div id="distrito-container" class="options-dep-prov">
                     <label>Distrito</label>
                     <div id="distrito-input-container">
-                        <select id="distrito-select-input">
-                            <option selected disabled hidden>Ej: Nuevo Chimbote</option>
+                        <select id="distrito-select-input" disabled>
+                            <option selected disabled hidden value="0">Seleccione su distrito</option>
                         </select>
                         <i class="fa-solid fa-sort-down"></i>
                     </div>
@@ -267,6 +252,7 @@
                             required>
                         <i id="alter-password-1" class="fa-regular fa-eye"></i>
                     </div>
+                    <p id="error-message-password-register-input"></p>
                 </div>
 
                 <div id="password-register-advice">
@@ -282,6 +268,7 @@
                         <input placeholder="Ingrese su contraseña" type="password" id="password-confirm-input" required>
                         <i id="alter-password-2" class="fa-regular fa-eye"></i>
                     </div>
+                    <p id="error-message-password-confirm-input"></p>
 
                 </div>
 
@@ -295,9 +282,11 @@
         </div>
     </div>
 
+    <script src="../../js/app/script_register.js"></script>
     <script src="../../js/app/script_register_1.js"></script>
     <script src="../../js/app/script_register_2.js"></script>
     <script src="../../js/app/script_register_3.js"></script>
+    <script src="../../js/app/script_register_3_selects.js"></script>
 </body>
 
 </html>

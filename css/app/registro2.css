@@ -1,5 +1,4 @@
-#register-form-2,
-#registerHeader2 {
+#register-form-2 {
     display: none;
 }
 
@@ -85,7 +84,7 @@
             font-size: 14px;
             font-family: "Montserrat", sans-serif;
             appearance: none;
-            color: #414141;
+            color: #5f5f5f; 
             font-weight: 400;
         }
 

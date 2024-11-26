@@ -19,6 +19,8 @@ function verificarCamposLogin() {
         mensajeErrorEmail.style.display = "inline";
         emailInput.style.boxShadow = "0 0 0 0.4px red"
     } else if (emailInput.value.length == 0) {
+        mensajeErrorEmail.style.display = "inline";
+        emailInput.style.boxShadow = "0 0 0 0.4px red"
         mensajeErrorEmail.textContent = "Por favor, ingresa tu correo electrónico."
     }
 
@@ -32,6 +34,7 @@ function verificarCamposLogin() {
 }
 
 emailInput.addEventListener('input', verificarCamposLogin);
+emailInput.addEventListener('blur', verificarCamposLogin);
 passwordInput.addEventListener('input', verificarCamposLogin);
 
 const alterPassword = document.getElementById("alter-password");
@@ -50,7 +53,13 @@ const loginContainer = document.getElementById("login-container");
 registroLink.addEventListener("click", () => {
     registerIframe.style.display = "block";
     loginContainer.style.display = "none";
+
+    localStorage.setItem('iframeLoginVisible', 'true'); // Guardar estado
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    registerIframe.contentWindow.location.reload();
+})
 
 const adviceRegisterDialog = document.getElementById("advice-register-dialog");
 
@@ -59,6 +68,9 @@ window.addEventListener("message", (event) => {
         case "Volver al login":
             registerIframe.style.display = "none";
             loginContainer.style.display = "flex";
+            localStorage.setItem('iframeLoginVisible', 'false'); // Cambiar estado para que, cuando se actualiza la página, no aparezca el register
+            registerIframe.contentWindow.location.reload();
+            localStorage.setItem("currentIndex", 0);
             break;
         case "Abrir advice register":
             adviceRegisterDialog.showModal();
@@ -75,10 +87,26 @@ const stayButton = document.getElementById("stay-button");
 outButton.addEventListener("click", () => {
     registerIframe.style.display = "none";
     loginContainer.style.display = "flex";
+    localStorage.setItem('iframeLoginVisible', 'false'); // Cambiar estado para que, cuando se actualiza la página, no aparezca el register
+
+    registerIframe.contentWindow.location.reload();
+    localStorage.setItem("currentIndex", 0);
+
     adviceRegisterDialog.close();
-    registerIframe.contentWindow.postMessage("Actualiza registro, despues de volver al login", "*");
 });
 
 stayButton.addEventListener("click", () => {
     adviceRegisterDialog.close();
 });
+
+// #region Guardando estado de Inicio de Sesión,o Registro
+const iframeLoginVisible = localStorage.getItem('iframeLoginVisible') === 'true';
+
+if (iframeLoginVisible) {
+    loginContainer.style.display = 'none';
+    registerIframe.style.display = 'flex';
+} else {
+    loginContainer.style.display = 'flex';
+    registerIframe.style.display = 'none';
+}
+// #endregion

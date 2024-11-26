@@ -1,5 +1,4 @@
-#register-form-3,
-#registerHeader3 {
+#register-form-3 {
     display: none;
 }
 
@@ -48,6 +47,11 @@
         padding: 0px 15px 0px 10px;
         border-radius: 4px;
         box-sizing: border-box;
+        font-size: 14px;
+    }
+    
+    select {
+        font-size: 14px;
     }
 }
 
@@ -125,8 +129,16 @@ input[type="number"] {
     gap: 20px;
 }
 
-#departamento-select-input {
-    color: #414141;
+[id$=select-input]:not(#country-code-select-input) {
+    color: #5f5f5f; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 33px;
+    
+    option {
+        color: black;
+    }
 }
 
 .options-dep-prov {
@@ -143,7 +155,7 @@ input[type="number"] {
             width: 100%;
             outline: none;
             border: none;
-            box-shadow: 0 0 0 0.2px black;
+            box-shadow: 0 0 0 0.6px rgb(179, 179, 179);
             background: none;
             height: 48px;
             padding: 0px 15px 0px 10px;
@@ -204,20 +216,11 @@ input[type="number"] {
     line-height: 120%;
 }
 
-#error-message-email-register-input {
+#register-form-3 [id^="error-message"] {
     display: none;
     width: 100%;
     color: red;
     text-align: center;
     font-size: 13px;
-    font-weight: 300;
-}
-
-#error-message-phone-number-input {
-    display: none;
-    width: 100%;
-    color: red;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 300;
+    font-weight: 330;
 }

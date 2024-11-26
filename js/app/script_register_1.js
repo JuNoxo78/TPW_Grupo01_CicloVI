@@ -1,42 +1,9 @@
-const volverOp1 = document.getElementById("volverOp1");
 const loginLink = document.querySelectorAll(".login-link");
-
-volverOp1.addEventListener("click", () => {
-    window.parent.postMessage("Volver al login", "*");
-});
 
 loginLink.forEach((link) => {
     link.addEventListener("click", () => {
         window.parent.postMessage("Abrir advice register", "*");
     });
-});
-
-const forms = document.querySelectorAll("form");
-
-const continueButtons = document.querySelectorAll(".continue-button");
-
-window.addEventListener("message", (event) => {
-    switch (event.data) {
-        case "Actualiza registro, despues de volver al login":
-            forms.forEach(form => {
-                form.reset();
-            });
-
-            continueButtons.forEach(continueButton => {
-                continueButton.disabled = true;
-                continueButton.classList.remove('enabled');
-            });
-
-            registerHeader1.style.display = "flex"
-            registerForm1.style.display = "flex"
-            registerHeader2.style.display = "none"
-            registerForm2.style.display = "none"
-            registerHeader3.style.display = "none"
-            registerForm3.style.display = "none"
-            break;
-        default:
-            break;
-    }
 });
 
 const numberDocInput = document.getElementById("numberDocInput");
@@ -106,6 +73,8 @@ function verificarCamposRegisterOne() {
 
 numberDocInput.addEventListener('keydown', verificarCamposRegisterOne);
 
+numberDocInput.addEventListener('blur', verificarCamposRegisterOne);
+
 numberDocInput.addEventListener('input', verificarCamposRegisterOne);
 
 selectInput.addEventListener("change", () => {
@@ -122,12 +91,10 @@ terminosCheckbox.addEventListener("change", verificarCamposRegisterOne);
 
 const registerForm1 = document.getElementById("register-form-1");
 const registerForm2 = document.getElementById("register-form-2");
-const registerHeader1 = document.getElementById("registerHeader1")
-const registerHeader2 = document.getElementById("registerHeader2");
 
 continueButton0.addEventListener("click", () => {
+    localStorage.setItem('iframeRegisterVisible', '2'); // Guardar estado
+
     registerForm1.style.display = "none"
     registerForm2.style.display = "flex"
-    registerHeader1.style.display = "none"
-    registerHeader2.style.display = "flex"
 })
