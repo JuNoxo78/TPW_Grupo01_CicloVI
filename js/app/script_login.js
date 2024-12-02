@@ -116,6 +116,8 @@ window.addEventListener("message", (event) => {
 
             emailInput.value = registerCacheData.correo
             passwordInput.value = registerCacheData.contraseña
+            mensajeErrorEmail.style.display = "none";
+            emailInput.style.boxShadow = "0 0 0 0.2px black"
             loginButton.disabled = false;
             loginButton.classList.add('enabled');
 
@@ -156,6 +158,10 @@ outButton.addEventListener("click", () => {
     registerIframe.contentWindow.location.reload();
     localStorage.setItem("currentIndex", 0);
 
+    contentForm.reset();
+    mensajeErrorEmail.style.display = "none";
+    emailInput.style.boxShadow = "0 0 0 0.2px black"
+
     adviceRegisterDialog.close();
 });
 
@@ -173,6 +179,10 @@ badOutButton.addEventListener("click", () => {
 
     registerIframe.contentWindow.location.reload();
     localStorage.setItem("currentIndex", 0);
+
+    contentForm.reset();
+    mensajeErrorEmail.style.display = "none";
+    emailInput.style.boxShadow = "0 0 0 0.2px black"
 
     adviceBadRegisterDialog.close();
 })
@@ -193,10 +203,12 @@ userOutButton.addEventListener("click", () => {
 
     registerIframe.contentWindow.location.reload();
     localStorage.setItem("currentIndex", 0);
+    contentForm.reset();
+    mensajeErrorEmail.style.display = "none";
+    emailInput.style.boxShadow = "0 0 0 0.2px black"
 
     adviceRegisterUserDialog.close();
 })
-
 
 userStayButton.addEventListener("click", () => {
     registerIframe.contentWindow.location.reload();

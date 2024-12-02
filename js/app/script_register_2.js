@@ -26,18 +26,21 @@ window.addEventListener("load", () => {
     const dniData = JSON.parse(localStorage.getItem('dniData'));
     const registerCacheData = JSON.parse(localStorage.getItem('registerCacheData'));
 
-    nombreCompleto.textContent = dniData.nombre_completo;
-    dniPNumber.textContent = dniData.numero;
+    if (registerCacheData) {
+        nombreCompleto.textContent = dniData.nombre_completo;
+        dniPNumber.textContent = dniData.numero;
 
-    const fecha = new Date(registerCacheData.fechaNacimiento);
+        const fecha = new Date(registerCacheData.fechaNacimiento);
 
-    const dia = String(fecha.getDate() + 1).padStart(2, '0');
-    const mes = String(fecha.getMonth() + 1).padStart(2, '0');
-    const year = String(fecha.getFullYear());
+        const dia = String(fecha.getDate() + 1).padStart(2, '0');
+        const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+        const year = String(fecha.getFullYear());
 
-    const fechaNacFormat = `${dia}/${mes}/${year}`;
+        const fechaNacFormat = `${dia}/${mes}/${year}`;
 
-    fechaPNacimiento.textContent = fechaNacFormat;
+        fechaPNacimiento.textContent = fechaNacFormat;
+    }
+
 })
 
 /* #region Añadiendo datos a registerCacheData - Form 2 */

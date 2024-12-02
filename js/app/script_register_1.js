@@ -106,35 +106,39 @@ continueButton0.addEventListener("click", () => {
         usuario.numberDocument === numberDocInput.value
     );
 
-    if (dniData.numero == dniNumber) {
-        if (usuarioEncontrado) {
-            window.parent.postMessage(usuarioEncontrado, "*")
+    if (dniData) {
+        if (dniData.numero == dniNumber) {
+            if (usuarioEncontrado) {
+                window.parent.postMessage(usuarioEncontrado, "*")
+            } else {
+                const fecha = new Date(fechaNacInput.value);
+
+                const dia = String(fecha.getDate() + 1).padStart(2, '0');
+                const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+                const year = String(fecha.getFullYear());
+
+                const fechaNacFormat = `${dia}/${mes}/${year}`;
+                fechaPNacimiento.textContent = fechaNacFormat;
+
+                nombreCompleto.textContent = dniData.nombre_completo;
+                dniPNumber.textContent = dniData.numero;
+
+                localStorage.setItem('iframeRegisterVisible', '2'); // Guardar estado
+                localStorage.setItem('currentIndex', '1'); // Guardar estado
+                currentIndex = 1;
+
+                registerForm1.style.display = "none";
+                registerForm2.style.display = "flex";
+            }
         } else {
-            const fecha = new Date(fechaNacInput.value);
-
-            const dia = String(fecha.getDate() + 1).padStart(2, '0');
-            const mes = String(fecha.getMonth() + 1).padStart(2, '0');
-            const year = String(fecha.getFullYear());
-
-            const fechaNacFormat = `${dia}/${mes}/${year}`;
-            fechaPNacimiento.textContent = fechaNacFormat;
-
-            nombreCompleto.textContent = dniData.nombre_completo;
-            dniPNumber.textContent = dniData.numero;
-
-            localStorage.setItem('iframeRegisterVisible', '2'); // Guardar estado
-            localStorage.setItem('currentIndex', '1'); // Guardar estado
-            currentIndex = 1;
-
-            registerForm1.style.display = "none";
-            registerForm2.style.display = "flex";
+            if (usuarioEncontrado) {
+                window.parent.postMessage(usuarioEncontrado, "*")
+            } else {
+                traerDatos();
+            }
         }
     } else {
-        if (usuarioEncontrado) {
-            window.parent.postMessage(usuarioEncontrado, "*")
-        } else {
-            traerDatos();
-        }
+        traerDatos();
     }
 })
 
