@@ -11,20 +11,6 @@ function updateDivs() {
     localStorage.setItem("currentIndex", currentIndex);
 }
 
-// Manejador para el botón "Seguir"
-registerForms.forEach((registerForm, index) => {
-    const nextButton = registerForm.querySelector("button")
-
-    if (nextButton) {
-        nextButton.addEventListener("click", () => {
-            if (index < registerForms.length - 1) {
-                currentIndex++;
-                updateDivs();
-            }
-        });
-    }
-})
-
 // Manejador para el botón "Volver"
 volverOp.addEventListener("click", () => {
     if (currentIndex > 0) {
@@ -35,7 +21,6 @@ volverOp.addEventListener("click", () => {
         registerIframe.contentWindow.location.reload();
     }
 });
-
 
 // Inicializar los divs según el estado guardado
 updateDivs();

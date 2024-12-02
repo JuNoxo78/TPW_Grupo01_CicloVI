@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="../../css/app/registro1.css">
     <link rel="stylesheet" href="../../css/app/registro2.css">
     <link rel="stylesheet" href="../../css/app/registro3.css">
+    <link rel="stylesheet" href="../../css/app/registro4_successful.css">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
                             <div id="tipo-documento">
                                 <label>Tipo de documento</label>
                                 <div id="input-doc-container">
-                                    <select id="select-input">
+                                    <select id="select-input" name="documentType">
                                         <option>DNI</option>
                                         <option>CE</option>
                                         <option>PAS</option>
@@ -64,7 +65,8 @@
                             <div id="document-number-container">
                                 <label for="numberDocInput">N° de documento</label>
                                 <div id="input-number-doc-container">
-                                    <input placeholder="Ej: 11122233" type="number" id="numberDocInput" required>
+                                    <input placeholder="Ej: 11122233" type="number" id="numberDocInput"
+                                        name="numberDocument" required>
                                 </div>
                                 <p id="error-message-number-doc-input"></p>
                             </div>
@@ -73,34 +75,35 @@
                         <div id="fecha-nacimiento-container">
                             <label for="fechaNacInput">Fecha de nacimiento</label>
                             <div id="input-fecha-nac-container">
-                                <input type="date" id="fechaNacInput" required>
+                                <input type="date" id="fechaNacInput" required name="fechaNacimiento"">
                             </div>
                         </div>
                     </div>
 
-                    <div id="terminos-beneficios-check">
-                        <div class="advices-container">
-                            <input type="checkbox" id="terminos-checkbox" class="ui-checkbox">
-                            <label>
-                                Acepto los
-                                <span>
-                                    Términos y Condiciones y la Política de Privacidad
-                                </span>
-                            </label>
-                        </div>
+                    <div id="terminos-beneficios-check" >
+                                <div class="advices-container">
+                                    <input type="checkbox" id="terminos-checkbox" class="ui-checkbox">
+                                    <label>
+                                        Acepto los
+                                        <span>
+                                            Términos y Condiciones y la Política de Privacidad
+                                        </span>
+                                    </label>
+                                </div>
 
-                        <div class="advices-container">
-                            <input type="checkbox" id="beneficios-checkbox" class="ui-checkbox">
-                            <label>
-                                Acepto recibir
-                                <span>
-                                    beneficios, ofertas, publicidad y novedades de BonaMedic
-                                </span>
-                            </label>
-                        </div>
-                    </div>
+                                <div class="advices-container">
+                                    <input type="checkbox" id="beneficios-checkbox" class="ui-checkbox">
+                                    <label>
+                                        Acepto recibir
+                                        <span>
+                                            beneficios, ofertas, publicidad y novedades de BonaMedic
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
 
-                    <button type="button" id="continue-button-0" class="continue-button" disabled>Continuar</button>
+                    <button type="submit" id="continue-button-0" class="continue-button"
+                        disabled>Continuar</button>
 
                     <div class="login-question-container">
                         <p>¿Ya tienes cuenta?</p>
@@ -117,26 +120,28 @@
         <div id="register-form-content-1">
             <h1>Verifica tus datos personales</h1>
 
-            <form novalidate>
+            <form id="form-2" novalidate>
                 <div id="info-register-user">
                     <div id="dni-info">
                         <h3>DNI</h3>
-                        <p>72134465</p>
+                        <p id="dni-p-number"></p>
                     </div>
+
                     <div id="nombres-apellidos-info">
                         <h3>Nombres y apellidos</h3>
-                        <p>Juan Andre López Córdova</p>
+                        <p id="nombre-completo"></p>
                     </div>
+
                     <div id="fecha-nacimiento-info">
                         <h3>Fecha de Nacimiento</h3>
-                        <p>30/03/2005</p>
+                        <p id="fecha-p-nacimiento"></p>
                     </div>
                 </div>
 
                 <div id="sexo-registro">
                     <label>Sexo</label>
                     <div id="input-sexo">
-                        <select id="select-sex-input">
+                        <select id="select-sex-input" name="sexo">
                             <option disabled selected hidden>Seleccione una opción</option>
                             <option class="true-sex-options">Femenino</option>
                             <option class="true-sex-options">Masculino</option>
@@ -145,7 +150,7 @@
                     </div>
                 </div>
 
-                <button type="button" id="continue-button-1" class="continue-button" disabled>Continuar</button>
+                <button type="submit" id="continue-button-1" class="continue-button" disabled>Continuar</button>
 
                 <div class="login-question-container">
                     <p>¿Ya tienes cuenta?</p>
@@ -161,11 +166,11 @@
         <div id="register-form-content-3">
             <h1>Contacto y contraseña</h1>
 
-            <form novalidate autocomplete="off">
+            <form id="form-3" novalidate autocomplete="off">
                 <div id="email-register-container">
                     <label for="email-register-input">Correo Electrónico</label>
                     <div id="email-register-input-container">
-                        <input placeholder="Ej: correo@mail.com" type="email" id="email-register-input" required>
+                        <input placeholder="Ej: correo@mail.com" type="email" id="email-register-input" name="correo" required>
                     </div>
                     <p id="error-message-email-register-input"></p>
                 </div>
@@ -174,7 +179,7 @@
                     <div id="country-code-number">
                         <label>Código del país</label>
                         <div id="country-code-input-container">
-                            <select id="country-code-select-input">
+                            <select id="country-code-select-input" name="phoneCode">
                                 <!-- #region phone codes -->
                                 <option value="+54">Argentina (+54)</option>
                                 <option value="+591">Bolivia (+591)</option>
@@ -206,7 +211,7 @@
                     <div id="phone-number-container">
                         <label for="phone-number-input">Número de celular</label>
                         <div id="phone-number-input-container">
-                            <input placeholder="Ej: 123456789" type="number" id="phone-number-input" required>
+                            <input placeholder="Ej: 123456789" type="number" id="phone-number-input" name="phoneNumber" required>
                         </div>
                         <p id="error-message-phone-number-input"></p>
                     </div>
@@ -216,7 +221,7 @@
                     <div id="departamento-container" class="options-dep-prov">
                         <label>Departamento</label>
                         <div id="departamento-input-container">
-                            <select id="departamento-select-input">
+                            <select id="departamento-select-input" name="ubigeoDepartamento">
                                 <option selected disabled hidden value="0">Seleccione su departamento</option>
                             </select>
                             <i class="fa-solid fa-sort-down"></i>
@@ -226,7 +231,7 @@
                     <div id="provincia-container" class="options-dep-prov">
                         <label>Provincia</label>
                         <div id="provincia-input-container">
-                            <select id="provincia-select-input" disabled>
+                            <select id="provincia-select-input" name="ubigeoProvincia" disabled>
                                 <option selected disabled hidden value="0">Seleccione su provincia</option>
                             </select>
                             <i class="fa-solid fa-sort-down"></i>
@@ -238,7 +243,7 @@
                 <div id="distrito-container" class="options-dep-prov">
                     <label>Distrito</label>
                     <div id="distrito-input-container">
-                        <select id="distrito-select-input" disabled>
+                        <select id="distrito-select-input" name="ubigeoDistrito" disabled>
                             <option selected disabled hidden value="0">Seleccione su distrito</option>
                         </select>
                         <i class="fa-solid fa-sort-down"></i>
@@ -248,7 +253,7 @@
                 <div id="password-register-container">
                     <label for="password-register-input">Crea una contraseña</label>
                     <div id="input-password-register-container">
-                        <input placeholder="Ingrese su contraseña" type="password" id="password-register-input"
+                        <input placeholder="Ingrese su contraseña" type="password" id="password-register-input" name="contraseña"
                             required>
                         <i id="alter-password-1" class="fa-regular fa-eye"></i>
                     </div>
@@ -272,7 +277,7 @@
 
                 </div>
 
-                <button type="button" id="continue-button-2" class="continue-button" disabled>Continuar</button>
+                <button type="submit" id="continue-button-2" class="continue-button" disabled>Continuar</button>
 
                 <div class="login-question-container">
                     <p>¿Ya tienes cuenta?</p>
@@ -282,11 +287,22 @@
         </div>
     </div>
 
+    <div id="successful-register" class="register-form">
+        <img src="../../img/app/4pc_4.png">
+
+        <div>
+            <h3>¡Cuenta creada con éxito!</h3>
+            <img src="../../img/app/check.png">
+            <p>¡Ya tienes una cuenta!&nbsp;&nbsp;&nbsp<span id="successful-login-link">Iniciar sesión</span></p>
+        </div>
+    </div>
+
     <script src="../../js/app/script_register.js"></script>
     <script src="../../js/app/script_register_1.js"></script>
     <script src="../../js/app/script_register_2.js"></script>
     <script src="../../js/app/script_register_3.js"></script>
     <script src="../../js/app/script_register_3_selects.js"></script>
+    <script src="../../js/app/script_register_4.js"></script>
 </body>
 
 </html>

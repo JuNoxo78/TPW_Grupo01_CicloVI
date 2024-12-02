@@ -118,6 +118,8 @@ body {
                 cursor: pointer;
                 font-family: "Montserrat", sans-serif;
                 appearance: none;
+                font-size: 14px;
+                color: black;
             }
 
             i {

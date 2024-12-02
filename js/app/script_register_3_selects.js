@@ -20,7 +20,7 @@ provinciaSelectInput.addEventListener("change", () => {
 })
 // #endregion
 
-const jsonFiles = ['../../data/app/ubigeo_departamentos.json', '../../data/app/ubigeo_provincias.json', '../../data/app/ubigeo_distritos.json'];
+const jsonFiles = ['https://raw.githubusercontent.com/JuNoxo78/TPW_Grupo01_CicloVI/refs/heads/master/data/app/ubigeo_departamentos.json', 'https://raw.githubusercontent.com/JuNoxo78/TPW_Grupo01_CicloVI/refs/heads/master/data/app/ubigeo_provincias.json', 'https://raw.githubusercontent.com/JuNoxo78/TPW_Grupo01_CicloVI/refs/heads/master/data/app/ubigeo_distritos.json'];
 
 // Usamos Promise.all para cargar todos los archivos JSON
 Promise.all(

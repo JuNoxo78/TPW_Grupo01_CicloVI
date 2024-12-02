@@ -82,6 +82,7 @@ iframe {
         font-weight: 500;
     }
 }
+
 /* #endregion */
 
 /* #region Login */
@@ -171,7 +172,7 @@ iframe {
         box-shadow: 0 0 0 0.2px black;
         border-radius: 4px;
     }
-    
+
     #mensaje-error-email {
         color: red;
         text-align: center;
@@ -423,6 +424,16 @@ iframe {
 /* #endregion */
 /* #endregion */
 
+#out-button, #bad-out-button, #bad-login-stay-button, #user-stay-button {
+    color: #4377B6;
+}
+
+#stay-button, #bad-stay-button, #user-out-button {
+    background-color: #222DA3;
+    color: white;
+}
+
+/* #region advice register dialog */
 #advice-register-dialog {
     background: none;
     outline: none;
@@ -454,7 +465,7 @@ iframe {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    
+
     font-size: 15px;
     font-weight: 400;
     color: #414141;
@@ -466,7 +477,7 @@ iframe {
     flex-direction: row;
     gap: 20px;
     height: 53px;
-    
+
     div {
         height: 100%;
         flex: 1;
@@ -479,16 +490,85 @@ iframe {
         font-weight: 500;
         cursor: pointer;
     }
-    
-    #out-button {
-        color: #4377B6;
-    }
-    
-    #stay-button {
-        background-color: #222DA3;
-        color: white;
+
+}
+
+/* #endregion */
+
+/* #region advice bas register dialog */
+#advice-bad-register-dialog, #advice-bad-login-dialog, #advice-register-user-dialog {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+#advice-bad-register-container, #advice-bad-login-container, #advice-register-user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px 25px 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 520px;
+
+    img {
+        height: 152px;
+        width: 152px;
     }
 }
+
+.image-plus-advice-bad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    color: #414141;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 130%;
+    }
+}
+
+.options-of-advice-bad {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 53px;
+
+    div {
+        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #4377B6;
+        border-radius: 40px;
+        font-size: 17px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+/* #endregion */
 
 #administrator-button {
     color: rgba(255, 0, 0, 0.89);
@@ -498,7 +578,7 @@ iframe {
     font-weight: 500;
     width: 100%;
     justify-content: end;
-    
+
     a {
         padding-right: 15px;
         padding-bottom: 15px;
@@ -510,3 +590,76 @@ iframe {
         justify-content: center;
     }
 }
+
+/* #section Load Dialog */
+#load-dialog {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+/*     backdrop-filter: blur(10px); */
+}
+
+.load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+    animation: rotate_3922 1.2s linear infinite;
+    background-color: #236cc8;
+    background-image: linear-gradient(#236cc8, #84cdfa, #5ad1cd);
+}
+
+.load span {
+    position: absolute;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: #236cc8;
+    background-image: linear-gradient(#236cc8, #84cdfa, #5ad1cd);
+}
+
+.load span:nth-of-type(1) {
+    filter: blur(5px);
+}
+
+.load span:nth-of-type(2) {
+    filter: blur(10px);
+}
+
+.load span:nth-of-type(3) {
+    filter: blur(25px);
+}
+
+.load span:nth-of-type(4) {
+    filter: blur(50px);
+}
+
+.load::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: white;
+    border: solid 5px white;
+    border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* #endregion */

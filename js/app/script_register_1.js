@@ -92,9 +92,109 @@ terminosCheckbox.addEventListener("change", verificarCamposRegisterOne);
 const registerForm1 = document.getElementById("register-form-1");
 const registerForm2 = document.getElementById("register-form-2");
 
-continueButton0.addEventListener("click", () => {
-    localStorage.setItem('iframeRegisterVisible', '2'); // Guardar estado
+const nombreCompleto = document.getElementById("nombre-completo");
+const dniPNumber = document.getElementById("dni-p-number");
+const fechaPNacimiento = document.getElementById("fecha-p-nacimiento");
 
-    registerForm1.style.display = "none"
-    registerForm2.style.display = "flex"
+continueButton0.addEventListener("click", () => {
+    const dniData = JSON.parse(localStorage.getItem('dniData'));
+    let dniNumber = document.getElementById("numberDocInput").value;
+
+    const usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
+
+    const usuarioEncontrado = usuariosRegistrados.find(usuario =>
+        usuario.numberDocument === numberDocInput.value
+    );
+
+    if (dniData.numero == dniNumber) {
+        if (usuarioEncontrado) {
+            window.parent.postMessage(usuarioEncontrado, "*")
+        } else {
+            const fecha = new Date(fechaNacInput.value);
+
+            const dia = String(fecha.getDate() + 1).padStart(2, '0');
+            const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+            const year = String(fecha.getFullYear());
+
+            const fechaNacFormat = `${dia}/${mes}/${year}`;
+            fechaPNacimiento.textContent = fechaNacFormat;
+
+            nombreCompleto.textContent = dniData.nombre_completo;
+            dniPNumber.textContent = dniData.numero;
+
+            localStorage.setItem('iframeRegisterVisible', '2'); // Guardar estado
+            localStorage.setItem('currentIndex', '1'); // Guardar estado
+            currentIndex = 1;
+
+            registerForm1.style.display = "none";
+            registerForm2.style.display = "flex";
+        }
+    } else {
+        if (usuarioEncontrado) {
+            window.parent.postMessage(usuarioEncontrado, "*")
+        } else {
+            traerDatos();
+        }
+    }
 })
+
+const form1 = document.getElementById("form-1");
+
+form1.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const data = Object.fromEntries(
+        new FormData(e.target)
+    )
+
+    localStorage.setItem('registerCacheData', JSON.stringify(data));
+})
+
+async function traerDatos() {
+    let dniNumber = document.getElementById("numberDocInput").value;
+
+    // Formatear fecha de nacimiento
+    const fecha = new Date(fechaNacInput.value);
+
+    const dia = String(fecha.getDate() + 1).padStart(2, '0');
+    const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+    const year = String(fecha.getFullYear());
+
+    const fechaNacFormat = `${dia}/${mes}/${year}`;
+    fechaPNacimiento.textContent = fechaNacFormat;
+
+    // Obtener data
+    try {
+        // Realizar la solicitud y esperar los datos
+        window.parent.postMessage("Pantalla de carga on", "*");
+
+        const respuesta = await fetch(`https://apiperu.dev/api/dni/${dniNumber}?api_token=2ae781ed1b88c4e3b8ca9a4fb2bebcfd524bfe231f0934780508a68b9a1b0f47`);
+        const datos = await respuesta.json();
+
+        // Actualizar contenido con los datos obtenidos
+        if (datos.success) {
+            window.parent.postMessage("Pantalla de carga off", "*");
+
+            nombreCompleto.textContent = datos.data.nombre_completo;
+            dniPNumber.textContent = datos.data.numero;
+
+            localStorage.setItem('dniData', JSON.stringify(datos.data)); // Guardar datos del API
+            localStorage.setItem('iframeRegisterVisible', '2'); // Guardar estado
+            localStorage.setItem('currentIndex', '1'); // Guardar estado
+            currentIndex = 1;
+
+            registerForm1.style.display = "none";
+            registerForm2.style.display = "flex";
+        } else {
+            form1.reset();
+            window.parent.postMessage("Pantalla de carga off", "*");
+
+            window.parent.postMessage("Abrir bad advice register", "*");
+        }
+    } catch (error) {
+        form1.reset();
+        window.parent.postMessage("Pantalla de carga off", "*");
+
+        window.parent.postMessage("Abrir bad advice register", "*");
+    }
+}

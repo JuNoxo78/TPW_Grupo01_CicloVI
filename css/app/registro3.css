@@ -1,8 +1,4 @@
 #register-form-3 {
-    display: none;
-}
-
-#register-form-3 {
     flex: 1;
     display: none;
     flex-direction: column;

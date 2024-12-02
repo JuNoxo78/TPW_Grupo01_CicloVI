@@ -167,3 +167,68 @@ alterPassword2.addEventListener('click', () => {
     alterPassword2.className = isPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
 });
 // #endregion
+
+const successfulRegister = document.getElementById("successful-register");
+
+continueButton2.addEventListener("click", () => {
+    window.parent.postMessage("Pantalla de carga on", "*");
+    setTimeout(() => {
+        window.parent.postMessage("Pantalla de carga off", "*");
+        localStorage.setItem('currentIndex', '3'); // Guardar estado
+        currentIndex = 3;
+
+        registerForm3.style.display = "none";
+        successfulRegister.style.display = "flex";
+        volverOp.style.display = "none";
+    }, 1100);
+
+})
+
+/* #region Añadiendo datos a registerCacheData - Form 3 */
+const form3 = document.getElementById("form-3");
+
+form3.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const data = Object.fromEntries(
+        new FormData(e.target)
+    )
+
+    let registerCacheData = JSON.parse(localStorage.getItem('registerCacheData'));
+
+    registerCacheData.correo = data.correo;
+    registerCacheData.phoneCode = data.phoneCode;
+    registerCacheData.phoneNumber = data.phoneNumber;
+    registerCacheData.ubigeoDepartamento = data.ubigeoDepartamento;
+    registerCacheData.ubigeoProvincia = data.ubigeoProvincia;
+    registerCacheData.ubigeoDistrito = data.ubigeoDistrito;
+    registerCacheData.contraseña = data.contraseña;
+
+    localStorage.setItem('registerCacheData', JSON.stringify(registerCacheData));
+
+    const ultimoIdGuardado = localStorage.getItem('ultimoId');
+    let ultimoId = 0;
+
+    if (ultimoIdGuardado) {
+        ultimoId = parseInt(ultimoIdGuardado);
+    } else {
+        localStorage.setItem("ultimoId", 1);
+    }
+
+    ultimoId = ultimoId + 1;
+    registerCacheData.id = ultimoId;
+
+    const usuariosRegistrados = localStorage.getItem('usuariosRegistrados');
+    let usuarios = [];
+
+    if (usuariosRegistrados) {
+        usuarios = JSON.parse(usuariosRegistrados);
+    }
+
+    usuarios.push(registerCacheData);
+
+    localStorage.setItem("usuariosRegistrados", JSON.stringify(usuarios));
+    localStorage.setItem("ultimoId", ultimoId.toString());
+
+})
+/* #endregion */
