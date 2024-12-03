@@ -93,6 +93,14 @@
                 <p>¿No tienes cuenta?</p>
                 <span id="registro-link">Regístrate</span>
             </div>
+
+        </div>
+
+        <div id="administrator-button">
+            <a href="../../html/app/admin_inicio.html">
+                <i class="fa-solid fa-lock"></i>
+                <p>Administrador</p>
+            </a>
         </div>
 
         <div id="login-footer">
@@ -128,6 +136,74 @@
         </div>
     </dialog>
 
+    <dialog id="advice-bad-register-dialog">
+        <div id="advice-bad-register-container">
+            <div class="image-plus-advice-bad">
+                <img src="../../img/app/sadFace.png">
+                <div>
+                    <h3>Lo sentimos, no se pudo verificar tus datos</h3>
+                    <p>Hubo un inconveniente con los datos que ingresaste. Por tu seguridad, vuelve a intentar.</p>
+                </div>
+            </div>
+            <div class="options-of-advice-bad">
+                <div id="bad-out-button">
+                    Salir
+                </div>
+                <div id="bad-stay-button">
+                    Intentar nuevamente
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="advice-bad-login-dialog">
+        <div id="advice-bad-login-container">
+            <div class="image-plus-advice-bad">
+                <img src="../../img/app/sadFace.png">
+                <div>
+                    <h3 style="font-size: 16px; font-weight: 400;">
+                        El correo o la contraseña que ingresaste son incorrectos
+                    </h3>
+
+                </div>
+            </div>
+            <div class="options-of-advice-bad">
+                <div id="bad-login-stay-button">
+                    Intentar nuevamente
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog close id="advice-register-user-dialog">
+        <div id="advice-register-user-container">
+            <div class="image-plus-advice-bad">
+                <img src="../../img/app/checkUser.png">
+                <div>
+                    <h3>¡Ya tienes una cuenta!</h3>
+                    <p>Ya existe una cuenta asociada a este documento con el correo <span id="user-dialog-span" >correo</span></p>
+                </div>
+            </div>
+            <div class="options-of-advice-bad">
+                <div id="user-stay-button">
+                    Intentar nuevamente
+                </div>
+                <div id="user-out-button">
+                    Iniciar sesión
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog close id="load-dialog">
+        <div class="load">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>  
+    </dialog>
+    
     <script src="../../js/app/script_login.js"></script>
 </body>
 

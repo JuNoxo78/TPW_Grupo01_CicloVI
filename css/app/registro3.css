@@ -1,0 +1,222 @@
+#register-form-3 {
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px 183.5px 60px 183.5px;
+    box-sizing: border-box;
+
+    img {
+        width: 130.5px;
+        height: auto;
+    }
+}
+
+#register-form-content-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h1 {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    label {
+        color: #565656;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 0 0.2px black;
+        height: 48px;
+        padding: 0px 15px 0px 10px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    
+    select {
+        font-size: 14px;
+    }
+}
+
+#email-register-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#country-code-number-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    #country-code-number {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        #country-code-input-container {
+            position: relative;
+            display: inline-block;
+
+            select {
+                width: 100%;
+                outline: none;
+                border: none;
+                box-shadow: 0 0 0 0.2px black;
+                background: none;
+                height: 48px;
+                padding: 0px 15px 0px 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-family: "Montserrat", sans-serif;
+                appearance: none;
+            }
+
+            i {
+                position: absolute;
+                right: 15px;
+                top: 45%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: rgb(0, 118, 106, 0.75);
+            }
+        }
+    }
+
+    #phone-number-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        #phone-number-input-container {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#departamento-provincia-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+[id$=select-input]:not(#country-code-select-input) {
+    color: #5f5f5f; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 33px;
+    
+    option {
+        color: black;
+    }
+}
+
+.options-dep-prov {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    div {
+        position: relative;
+        display: inline-block;
+
+        select {
+            width: 100%;
+            outline: none;
+            border: none;
+            box-shadow: 0 0 0 0.6px rgb(179, 179, 179);
+            background: none;
+            height: 48px;
+            padding: 0px 15px 0px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            appearance: none;
+        }
+
+        i {
+            position: absolute;
+            right: 15px;
+            top: 45%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: rgb(0, 118, 106, 0.75);
+        }
+    }
+}
+
+#password-register-container, #password-confirm-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#input-password-register-container, #input-password-confirm-container {
+    box-shadow: 0 0 0 0.2px black;
+    border-radius: 4px;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: row;
+
+    input {
+        flex: 1;
+        box-shadow: none;
+    }
+
+    i {
+        display: flex;
+        align-items: center;
+        width: 20px;
+        padding-right: 15px;
+        color: rgb(0, 118, 106, 0.75);
+        justify-content: center;
+ 
+    }
+}
+
+#password-register-advice {
+    display: flex;
+    padding: 0px 10px;
+    
+    color: #565656;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+}
+
+#register-form-3 [id^="error-message"] {
+    display: none;
+    width: 100%;
+    color: red;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 330;
+}
