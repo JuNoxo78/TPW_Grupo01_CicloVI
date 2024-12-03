@@ -15,7 +15,8 @@ contentForm.addEventListener("submit", (e) => {
     setTimeout(() => {
         window.parent.postMessage("Pantalla de carga off", "*");
         if (usuarioEncontrado) {
-            alert("Inicio de sesión exitoso.");
+            localStorage.setItem("ultimoLogin", JSON.stringify(usuarioEncontrado))
+            window.location.href = "../../html/app/plataforma.html"
         } else {
             adviceBadLoginDialog.showModal();
         }

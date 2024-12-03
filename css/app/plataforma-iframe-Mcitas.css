@@ -1,0 +1,66 @@
+body {
+    padding: 30px 500px 0px 40px;
+}
+
+#container-proximas-citas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#title-proximas-citas {
+    border-bottom: solid 2px #4150EC;
+    padding: 8px 10px;
+
+    h1 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #101EB0;
+    }
+}
+
+#container-citas-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#citas-card {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.2px black;
+    
+    #cita-date {
+        text-align: center;
+        width: 50px;
+        font-size: 16px;
+    }
+    
+    #cita-info {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    
+    #cita-tipo {
+        font-size: 13px;
+    }
+    
+    #cita-especialidad {
+        font-size: 17px;
+    }
+    
+    #cita-doctor {
+        font-size: 15px;
+    }
+    
+    #cita-hora {
+        font-size: 17px;
+    }
+    
+    #cita-pago {
+        font-size: 15px;
+    }
+}
