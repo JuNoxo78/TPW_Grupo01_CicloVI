@@ -5,22 +5,19 @@
     <title>Empleados Registrados en la Clínica</title>
     <button onclick="window.location.href='admin_inicio.html'">Regresar a página Principal</button>
     <script>
-        // Función para cargar y mostrar los datos de empleados (médicos y enfermeros)
         function cargarEmpleados() {
             const empleados = JSON.parse(localStorage.getItem('empleados')) || [];
             const contenedorEmpleados = document.getElementById('contenedor-empleados');
             const filtroRol = document.getElementById('filtro-rol').value;
             const filtroBusqueda = document.getElementById('filtro-busqueda').value.toUpperCase();
 
-            contenedorEmpleados.innerHTML = ''; // Limpiar contenido previo
+            contenedorEmpleados.innerHTML = ''; 
 
-            // No mostrar registros si no se ha seleccionado un rol
             if (filtroRol === "--Seleccione un rol--" || filtroRol === "") {
                 return;
             }
 
             empleados.forEach((empleado, index) => {
-                // Mostrar solo los empleados que coinciden con el filtro de rol y búsqueda
                 if ((filtroRol === 'Todos' || empleado.rol === filtroRol) &&
                     (empleado.nombre.toUpperCase().includes(filtroBusqueda) || 
                      empleado.numColegiatura.toUpperCase().includes(filtroBusqueda) || 
@@ -53,30 +50,26 @@
             });
         }
 
-        // Función para eliminar un empleado
         function eliminarEmpleado(index) {
             let empleados = JSON.parse(localStorage.getItem('empleados')) || [];
-            empleados.splice(index, 1); // Eliminar el empleado del array
-            localStorage.setItem('empleados', JSON.stringify(empleados)); // Actualizar localStorage
-            cargarEmpleados(); // Recargar la lista de empleados
+            empleados.splice(index, 1);
+            localStorage.setItem('empleados', JSON.stringify(empleados)); 
+            cargarEmpleados(); 
         }
 
-        // Función para convertir entrada a mayúsculas y permitir solo números y letras
         function filtrarBusqueda(event) {
             let valor = event.target.value.toUpperCase();
-            valor = valor.replace(/[^A-Z0-9]/g, ''); // Permitir solo letras mayúsculas y números
+            valor = valor.replace(/[^A-Z0-9]/g, ''); 
             event.target.value = valor;
             cargarEmpleados();
         }
 
-        // Cargar los datos al cargar la página
         window.onload = cargarEmpleados;
     </script>
 </head>
 <body>
     <h1>Empleados Registrados en la Clínica</h1>
     <div class="filtros">
-        <!-- Filtro de rol -->
         <label for="filtro-rol">Filtrar por Rol:</label>
         <select id="filtro-rol" onchange="cargarEmpleados()">
             <option value="--Seleccione un rol--">--Seleccione un rol--</option>
@@ -85,12 +78,10 @@
             <option value="Enfermero">Enfermero/a</option>
         </select>
         
-        <!-- Filtro de búsqueda por DNI, Nombre o Número de Colegiatura -->
         <label for="filtro-busqueda">Buscar por DNI, Nombre o Número de Colegiatura:</label>
         <input type="text" id="filtro-busqueda" oninput="filtrarBusqueda(event)" placeholder="Buscar...">
     </div>
 
-    <!-- Contenedor donde se mostrarán los empleados -->
     <div id="contenedor-empleados" class="contenedor-empleados"></div>
 </body>
 </html>

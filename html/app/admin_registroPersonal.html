@@ -7,14 +7,14 @@
             const rol = document.getElementById('rol').value;
             const especialidad = document.getElementById('especialidad');
             if (rol === "Medico") {
-                especialidad.disabled = false;  // Habilita el campo de especialidad
-                especialidad.value = "";  // Reinicia la selección si es Médico
+                especialidad.disabled = false; 
+                especialidad.value = ""; 
             } else if (rol === "Enfermero") {
-                especialidad.disabled = false;  // Desactiva el campo si es Enfermero
-                especialidad.value = "";  // Asigna "Nada" automáticamente
+                especialidad.disabled = false;  
+                especialidad.value = "";  
             } else {
-                especialidad.disabled = true;  // Desactiva el campo si no se selecciona ningún rol
-                especialidad.value = "";  // Deja el campo vacío si no se selecciona ningún rol
+                especialidad.disabled = true;  
+                especialidad.value = ""; 
             }
         }
 
@@ -34,7 +34,6 @@
             const dni = document.querySelector('input[name="DNI"]').value;
             let especialidad = document.getElementById('especialidad').value;
 
-            // Si es enfermero, asegúrate de que la especialidad sea "Nada"
             if (rol === "Enfermero" && especialidad === "") {
                 especialidad = "Nada";
             }
@@ -43,7 +42,7 @@
             const cuarto = document.querySelector('input[name="Cuarto"]').value;
             const horario = [];
 
-            // Recolectar horarios
+
             document.querySelectorAll('.dia').forEach(dia => {
                 const nombreDia = dia.querySelector('.nombre-dia').textContent;
                 const turno1Inicio = dia.querySelector('.turno1-inicio').value;
@@ -112,7 +111,6 @@
             </p>
         </div>
 
-        <!-- Sección de horarios -->
         <h1>Agregar Horario</h1>
         <div id="horario">
             <div class="dia">
@@ -124,7 +122,7 @@
                 <input type="time" class="turno2-inicio"> a 
                 <input type="time" class="turno2-fin">
             </div>
-            <!-- Repetir para cada día de la semana -->
+
             <div class="dia">
                 <span class="nombre-dia">Martes</span>
                 <label>Turno 1:</label>
@@ -180,7 +178,6 @@
                 <input type="time" class="turno2-fin">
             </div>
         </div>
-
         <button type="reset">Borrar Contenido</button>
         <button type="submit">Registrar Personal</button>
         <button type="button" onclick="window.location.href = 'admin_registradoPersonal.html';">Volver</button>
