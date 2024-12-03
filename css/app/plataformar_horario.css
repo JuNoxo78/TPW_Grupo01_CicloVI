@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: space-between
+}
+
+
+.container-horario{
+    width: 673px;
+    height: 699px;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.container-horario .container-button_cancelar{
+    height: 16px;
+    display: flex;
+    justify-content: end;
+}
+
+.container-button_cancelar button{
+    border: none;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.container-progreso_registro{
+    width: 81px;
+    height: 32px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-progreso_registro .registro1{
+    border: 1px solid #236CC8;
+    border-radius: 20.79px;
+    width: 50px;
+    height: 31.61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-progreso_registro .registro2{
+    width: 50px;
+    height: 31.61px;
+    border: 1px solid #B9B9B9;
+    border-radius: 20.79px;
+}
+#line{
+    border: none;
+    width: 50px;
+    height: 2px;
+    background-color: lightgray;
+}
+
+#encabezado-horario{
+    margin-top: 25px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #171F70;
+}
+
+.container-filtrado{
+    margin-top: 25px;
+    width: 477px;
+    height: 67px;
+}
+
+.container-filtrado h3{
+    font-weight: 500;
+    font-size: 14px;
+    color: #565656;
+}
+
+.container-filtrado input{
+    width: 100%;
+    height: 48px;
+    border: none;
+    border: 0.2px solid #121857;
+    border-radius: 4px;
+}
+
+.container-elementos_horario{
+    width: 673px;
+    height: 341px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.container-elementos_horario .container-encabezado{
+    width: 100%;
+    height: 36px;
+    border-bottom: 1.5px solid #00A191;
+}
+
+.container-encabezado h1{
+    font-weight: 500;
+    font-size: 21px;
+    color: #00A191;
+}
+
+.container-opciones{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.options{
+    width: 309px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-horas{
+    width: 633px;
+    height: 70px;
+    margin-top: 15px;
+}
+
+.encabezado-options{
+    font-weight: 500;
+    font-size: 17px;
+    color: #3A3A3A;
+}
+
+#container_opciones{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    column-gap: 15px;
+    margin-top: 10px;
+}
+
+#container_opciones div{
+    width: 66px;
+    height: 40px;
+    border: 1px solid #00A29166;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container_opciones div p{
+    font-weight: 400;
+    font-size: 15px;
+    color: #7B7B7B;
+}
+.container-options{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.container-options div{
+    width: 66px;
+    border: 1px solid #00A29166;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-options div p{
+    font-weight: 400;
+    font-size: 15px;
+    color: #7B7B7B;
+}
+
+#continuar{
+    border: none;
+    background-color: transparent;
+    border: 1px solid #4377B6;
+    background-color: #4377B6;
+    border-radius: 30px;
+    width: 119px;
+    height: 43px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.container-resumen{
+    width: 328px;
+    height: 429px;
+    background-color: #00A2910D;
+    padding: 40px 30px;
+    margin: 45px 150px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+}
+
+.container-resumen h1{
+    font-weight: 500;
+    font-size: 19px;
+    color: #424242;
+}
+
+.container-secciones{
+    width: 268px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+
+.elementos{
+    width: 100%;
+    height: 37px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.elementos span{
+    font-weight: 500;
+    font-size: 15px;
+    color: #565656;
+}
+
+.elementos i{
+    display: flex;
+    align-items: end;
+}
+

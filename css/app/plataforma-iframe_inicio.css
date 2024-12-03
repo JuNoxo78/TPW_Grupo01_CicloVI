@@ -80,7 +80,7 @@ body{
     margin-top: 10px;
 }
 
-.container-button input{
+.container-button a{
     width: 178px;
     height: 43px;
     padding: 13px 18px;
@@ -92,8 +92,10 @@ body{
     font-weight: 400;
     font-family:  "Montserrat", sans-serif;
     margin-top: 15px;
+    text-decoration: none;
+    text-align: center;
 }
 
-.container-button input:hover{
+.container-button a:hover{
     cursor: pointer;
 }

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleccion de horario</title>
+        <!---Montserrat--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+    
+        <!---Maven Pro--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    
+        <!---AwesomeFonts--->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    
+        <!--Css-->
+    <link rel="stylesheet" href="/css/app/plataformar_horario.css">
+</head>
+<body>
+    <div class="container-horario">
+        <div class="container-button_cancelar">
+            <button>
+                <span>X</span>
+                Cancelar
+            </button>
+        </div>
+        <div class="container-progreso_registro">
+            <div class="registro1">
+                <p>1</p>
+            </div>
+            <div id="line"></div>
+            <div class="registro2"></div>
+        </div>
+        <h1 id="encabezado-horario">Elije la fecha y hora</h1>
+            <div class="container-filtrado">
+                <h3>Filtrar por fecha</h3>
+                <input type="text" required placeholder="     Ejemplo 25/11/2024" >
+            </div>
+        <div class="container-elementos_horario">
+            <div class="container-encabezado">
+                <h1>Horarios</h1>
+            </div>
+            <div class="container-opciones">
+                <div class="options">
+                    <h2 class="encabezado-options">Sabado 23 </h2>
+                    <div id="container_opciones">
+                        <div><p>8:30</p></div>
+                        <div><p>9:00</p></div>
+                        <div><p>9:30</p></div>
+                        <div><p>10:00</p></div>
+                    </div>
+                </div>
+                <div class="container-horas">
+                    <h2 class="encabezado-options">Sabado 07 de diciembre 2024</h2>
+                    <div class="container-options">
+                        <div><p>8:30</p></div>
+                        <div><p>9:00</p></div>
+                        <div><p>9:30</p></div>
+                        <div><p>10:00</p></div>
+                        <div><p>10:30</p></div>
+                        <div><p>11:00</p></div>
+                        <div><p>11:30</p></div>
+                        <div><p>12:00</p></div>
+                    </div>
+                </div>
+                <div class="container-horas">
+                    <h2 class="encabezado-options">Sabado 14 de diciembre 2024</h2>
+                    <div class="container-options">
+                        <div><p>8:30</p></div>
+                        <div><p>9:00</p></div>
+                        <div><p>9:30</p></div>
+                        <div><p>10:00</p></div>
+                        <div><p>10:30</p></div>
+                        <div><p>11:00</p></div>
+                        <div><p>11:30</p></div>
+                        <div><p>12:00</p></div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <button id="continuar" type="button">Continuar</button>
+    </div>
+    <div class="container-resumen">
+        <h1>Resumen de tu cita</h1>
+        <div class="container-secciones">
+            <div class="elementos">
+                <i class="fa-solid fa-stethoscope"></i>
+                <div class="Especialidad">
+                    <span>Especialidad</span>
+                    <p>Cardiologia</p>
+                </div>
+            </div>
+            <div class="elementos">
+                <i class="fa-solid fa-user-doctor"></i>
+                <div class="Medico">
+                    <span>Medico</span>
+                    <p>Dr. Victor Cuevas Fernandez</p>
+                </div>
+            </div>
+            <div class="elementos">
+                <i class="fa-solid fa-house-medical"></i>
+                <div class="Consultorio">
+                    <span>Consultorio</span>
+                    <p>CO208</p>
+                </div>
+            </div>
+            <div class="elementos">
+                <i class="fa-solid fa-calendar-day"></i>
+                <div class="fecha">
+                    <span>Fecha</span>
+                    <p>Por definir</p>
+                </div>
+            </div>
+            <div class="elementos">
+                <i class="fa-solid fa-clock"></i>
+                <div class="hora">
+                    <span>Hora</span>
+                    <p>Por definir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
