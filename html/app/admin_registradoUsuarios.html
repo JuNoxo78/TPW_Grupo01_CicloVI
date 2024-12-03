@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="../../css/app/admin_registradoUsuarios.css">
+    <title>Usuarios Registrados en la Plataforma</title>
+    <script>
+        // Función para cargar y mostrar los datos de usuarios registrados
+        function cargarUsuarios() {
+            // Obtener usuarios desde localStorage bajo la clave 'usuariosRegistrados'
+            const usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+            const contenedorUsuarios = document.getElementById('contenedor-usuarios');
+            const filtroBusqueda = document.getElementById('filtro-busqueda').value.toUpperCase();
+
+            contenedorUsuarios.innerHTML = ''; // Limpiar contenido previo
+
+            usuarios.forEach((usuario, index) => {
+                // Verificar si coincide con el filtro
+                if (
+                    (usuario.correo && usuario.correo.toUpperCase().includes(filtroBusqueda)) || 
+                    (usuario.nombre && usuario.nombre.toUpperCase().includes(filtroBusqueda)) || 
+                    (usuario.numberDocument && usuario.numberDocument.includes(filtroBusqueda))
+                ) {
+                    // Crear un div para el usuario
+                    const usuarioDiv = document.createElement('div');
+                    usuarioDiv.className = 'usuario';
+                    usuarioDiv.innerHTML = `
+                        <p><strong>NOMBRE:</strong> ${usuario.nombre}</p>
+                        <p><strong>CORREO ELECTRONICO:</strong> ${usuario.correo}</p>
+                        <p><strong>DOCUMENTO:</strong> ${usuario.documentType} ${usuario.numberDocument}</p>
+                        <p><strong>TELEFONO:</strong> ${usuario.phoneCode} ${usuario.phoneNumber}</p>
+                        <p><strong>FECHA DE NACIMIENTO:</strong> ${usuario.fechaNacimiento}</p>
+                        <p><strong>SEXO:</strong> ${usuario.sexo}</p>
+                        <p><strong>DEPARTAMENTO:</strong> ${usuario.ubigeoDepartamento}</p>
+                        <p><strong>PROVINCIA:</strong> ${usuario.ubigeoProvincia}</p>
+                        <p><strong>DISTRITO:</strong> ${usuario.ubigeoDistrito}</p>
+                        <p><strong>Contraseña:</strong> ${usuario.contraseña}</p>
+                        <p><strong>ID:</strong> ${usuario.id}</p>
+                        <button onclick="eliminarUsuario(${index})">Eliminar</button>
+                    `;
+                    contenedorUsuarios.appendChild(usuarioDiv);
+                }
+            });
+
+            if (contenedorUsuarios.innerHTML === '') {
+                contenedorUsuarios.innerHTML = '<p>No se encontraron usuarios.</p>';
+            }
+        }
+
+        // Función para eliminar un usuario
+        function eliminarUsuario(index) {
+            let usuarios = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+            usuarios.splice(index, 1); // Eliminar usuario
+            localStorage.setItem('usuariosRegistrados', JSON.stringify(usuarios)); // Actualizar localStorage
+            cargarUsuarios(); // Recargar lista
+        }
+
+        // Función para filtrar búsqueda
+        function filtrarBusqueda(event) {
+            cargarUsuarios();
+        }
+
+        // Cargar datos al cargar la página
+        window.onload = cargarUsuarios;
+    </script>
+</head>
+
+<body>
+    <h1>Usuarios Registrados en la Plataforma</h1>
+    <button onclick="window.location.href='admin_inicio.html'">Regresar a página Principal</button>
+
+    <div class="filtros">
+        <label for="filtro-busqueda">Buscar por Nombre, Correo o Documento:</label>
+        <input type="text" id="filtro-busqueda" oninput="filtrarBusqueda(event)" placeholder="Buscar...">
+    </div>
+
+    <div id="contenedor-usuarios" class="contenedor-usuarios"></div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+html {
+    background-image: url("../../img/app/DOCTORES.jpg"); /* Establece la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra toda la ventana */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: #007BFF; /* Color de fondo complementario */
+}
+
+h1 {
+    font-weight: bold;
+    font-weight: 1000; /* Hace el texto más grueso */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #007BFF; /* Establece el color del texto */
+    text-shadow: 
+        5px -1px 0 #ffffff,  /* Sombra de texto blanca desplazada */
+         5px -1px 0 #000000, /* Sombra de texto negra desplazada */
+        5px  1px 0 #ffffff,
+         5px  1px 0 #ffffff;
+    font-family: 'Montserrat', sans-serif; /* Establece la fuente del texto */
+    font-size: 20pt; /* Tamaño de la fuente */
+}
+
+form {
+    text-align: center; /* Centra el contenido del formulario */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    padding: 20px; /* Añade espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra para el formulario */
+    margin: 20px auto; /* Centra el formulario horizontalmente */
+    max-width: 600px; /* Ancho máximo del formulario */
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+    margin-bottom: 20px; /* Espacio adicional entre los filtros y los usuarios */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #000000; /* Establece el color del texto */
+    text-shadow: 
+        5px -1px 0 #ffffff,  /* Sombra de texto blanca desplazada */
+         5px -1px 0 #000000, /* Sombra de texto negra desplazada */
+        5px  1px 0 #ffffff,
+         5px  1px 0 #ffffff;
+    font-family: 'Montserrat', sans-serif; /* Establece la fuente del texto */
+    font-size: 15pt; /* Tamaño de la fuente */
+}
+
+.filtros input {
+    
+    background-color: white; /* Fondo blanco */
+    padding: 10px; /* Espaciado dentro del campo */
+    font-size: 14px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    width: 300px; /* Ancho del campo de búsqueda */
+    
+}
+.filtros {
+    
+    font-weight: bold;
+    font-weight: 1000; /* Hace el texto más grueso */
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    padding: 10px; /* Añadir espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+    margin: 10px 0; /* Márgenes alrededor */
+}
+
+.filtros input {
+    
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borde sutil */
+    background-color: #fff; /* Fondo blanco para el campo de texto */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para el campo */
+}
+
+.contenedor-usuarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+    margin-top: 20px; /* Espacio entre el campo de búsqueda y los usuarios */
+    background-color: rgba(255, 255, 255, 0.786); /* Fondo blanco para el contenedor de usuarios */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.usuario {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 250px; /* Tamaño del contenedor */
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.usuario p {
+    font-size: 12pt;
+    margin: 5px 0;
+    
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+    padding: 10px 20px; /* Espacio interno del botón */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+    color: rgb(255, 255, 255); /* Color del texto del botón */
+    background-color: #007BFF; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: 1000; /* Hace el texto del botón más grueso */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+}
