@@ -119,7 +119,11 @@ header{
 .barra-propiedades nav a{
     width: 100%;
     height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
 }
+
 
 #inicio:hover{
     background-color: #00A29126;
