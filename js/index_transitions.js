@@ -1,12 +1,11 @@
-const button = document.getElementById('ubicacionButton');
-const imageDiv = document.getElementById('imagenSede');
-const image = document.querySelector('#imagenSede img');
-const ubicacionText = document.getElementById
-    ('ubicacionText');
-const rrssIconsLinks = document.getElementsByClassName('iconsLinks');
-const rrssIcons = document.querySelector('#rrssIcons i');
+const button = document.getElementById("ubicacionButton");
+const imageDiv = document.getElementById("imagenSede");
+const image = document.querySelector("#imagenSede img");
+const ubicacionText = document.getElementById("ubicacionText");
+const rrssIconsLinks = document.getElementsByClassName("iconsLinks");
+const rrssIcons = document.querySelector("#rrssIcons i");
 
-button.addEventListener('mouseover', () => {
+button.addEventListener("mouseover", () => {
     ubicacionText.style.transition = "text-shadow 0.2s ease";
     ubicacionText.style.textShadow = "0px 0px 20px rgba(255, 255, 255, 0.4)";
 
@@ -21,7 +20,7 @@ button.addEventListener('mouseover', () => {
     image.style.transform = "scale(1.03)";
 });
 
-button.addEventListener('mouseout', () => {
+button.addEventListener("mouseout", () => {
     ubicacionText.style.textShadow = "0px 0px 10px rgba(255, 255, 255, 0.35)";
 
     button.style.transform = "none";
@@ -32,7 +31,7 @@ button.addEventListener('mouseout', () => {
     image.style.transform = "scale(1.0)";
 });
 
-button.addEventListener('mousedown', () => {
+button.addEventListener("mousedown", () => {
     ubicacionText.style.transition = "text-shadow 0s linear";
     ubicacionText.style.textShadow = "0px 0px 10px rgba(255, 255, 255, 0.35)";
 
@@ -46,3 +45,4 @@ button.addEventListener('mousedown', () => {
     image.style.transition = "all 0s linear";
     image.style.transform = "scale(1.0)";
 });
+
